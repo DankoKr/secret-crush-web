@@ -1,25 +1,34 @@
 <template>
-  <header class="bg-white py-4 sticky top-0 z-10">
-    <div class="container mx-auto flex items-center justify-between">
-      <div class="flex items-center gap-16">
-        <Logo class="w-24 lg:w-[150px]" />
-        <HeaderNavigation class="hidden lg:flex" />
+  <header
+    class="bg-black text-white sticky top-0 z-50 border-b border-zinc-800"
+  >
+    <div class="container mx-auto flex items-center gap-4 px-4 py-4">
+      <div class="flex items-center gap-3">
+        <Logo class="h-10 w-auto" />
+        <div class="hidden md:flex flex-col leading-tight">
+          <span class="text-base font-semibold uppercase">Secret Crush</span>
+          <span class="text-sm text-brand-secondary-text">
+            Party Events & Yacht Parties
+          </span>
+        </div>
       </div>
 
-      <div class="hidden lg:flex flex-col items-end gap-4 ml-auto">
-        <NuxtLink
-          v-if="otherLocale"
-          :to="switchLocalePath(otherLocale.code)"
-          class="text-brand-secondary-text hover:text-black cursor-pointer uppercase"
-        >
-          {{ otherLocale.code }}
-        </NuxtLink>
-        <HeaderDeliveryBadges />
+      <div class="hidden lg:flex items-center gap-8 ml-auto">
+        <HeaderNavigation />
+        <div class="flex items-center">
+          <NuxtLink
+            v-if="otherLocale"
+            :to="switchLocalePath(otherLocale.code)"
+            class="text-brand-secondary-text hover:text-white uppercase"
+          >
+            {{ otherLocale.code }}
+          </NuxtLink>
+        </div>
       </div>
 
       <button
         @click="isMenuOpen = !isMenuOpen"
-        class="lg:hidden p-2 text-brand-primary-text"
+        class="lg:hidden p-2 text-white ml-auto"
         aria-label="Toggle Menu"
       >
         <svg
@@ -58,12 +67,11 @@
     <Transition name="fade">
       <div
         v-if="isMenuOpen"
-        class="lg:hidden absolute top-full left-0 w-full bg-white border-b shadow-lg py-6 px-4 z-40"
+        class="lg:hidden absolute inset-x-0 top-full bg-zinc-950/97 border-b border-zinc-800 shadow-xl z-40"
       >
-        <div class="flex flex-col gap-6 items-center">
+        <div class="flex flex-col gap-6 px-4 py-6">
           <HeaderNavigation />
-          <div class="flex flex-col items-center gap-4">
-            <HeaderDeliveryBadges />
+          <div class="flex justify-center">
             <NuxtLink
               v-if="otherLocale"
               :to="switchLocalePath(otherLocale.code)"
@@ -79,21 +87,19 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from "vue";
-import HeaderDeliveryBadges from "./HeaderDeliveryBadges.vue";
+import { ref, computed, watch } from "vue";
 import HeaderNavigation from "./HeaderNavigation.vue";
 import Logo from "./Logo.vue";
 
 const { locale, locales } = useI18n();
 const switchLocalePath = useSwitchLocalePath();
+const route = useRoute();
 
 const otherLocale = computed(() =>
   locales.value.find((l) => l.code !== locale.value),
 );
-
 const isMenuOpen = ref(false);
 
-const route = useRoute();
 watch(
   () => route.fullPath,
   () => {

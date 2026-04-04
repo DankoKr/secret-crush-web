@@ -3,8 +3,8 @@
     <NuxtLink
       v-for="link in navLinks"
       :key="link.key"
-      :to="localePath(link.to)"
-      class="text-xl text-brand-secondary-text hover:text-brand-primary-text transition-colors uppercase tracking-wider"
+      :to="localePath('/') + link.to"
+      class="text-xl text-brand-secondary-text hover:text-brand-primary-text transition-colors tracking-wider cursor-pointer"
     >
       {{ t(link.key) }}
     </NuxtLink>
@@ -16,10 +16,9 @@ const { t } = useI18n();
 const localePath = useLocalePath();
 
 const navLinks = [
-  { key: "nav.home", to: "/" },
-  { key: "nav.about", to: "/about" },
-  { key: "nav.products", to: "/products" },
-  { key: "nav.menu", to: "/menu" },
-  { key: "nav.locations", to: "/locations" },
+  { key: "nav.events", to: "#events" },
+  { key: "nav.yacht", to: "#yacht" },
+  { key: "nav.about", to: "#about" },
+  { key: "nav.contacts", to: "#contact" },
 ];
 </script>

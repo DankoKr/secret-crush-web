@@ -21,11 +21,11 @@ export default <Config>{
       colors: {
         transparent: "transparent",
         current: "currentColor",
-        "brand-yellow": "#FBCB31",
-        "brand-primary-text": "#333333",
-        "brand-red": "#FF2121",
-        "brand-secondary-text": "#777",
-        "brand-red-hover": "#CC1C22",
+        "brand-red": "#d90429",
+        "brand-red-light": "#ff335f",
+        "brand-primary-text": "#ffffff",
+        "brand-secondary-text": "#BBB8B8",
+        "brand-bg": "#070707",
       },
       container: {
         screens: {

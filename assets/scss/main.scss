@@ -1,1 +1,12 @@
-@use './fonts';
+@use "./fonts";
+
+html {
+  scroll-behavior: smooth;
+}
+
+#events,
+#yacht,
+#about,
+#contact {
+  scroll-margin-top: 100px;
+}
