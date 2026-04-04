@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "home": "Home",
+    "events": "Events",
+    "yacht": "Yacht Parties",
+    "about": "About Us",
+    "contacts": "Contacts",
+    "buyTicket": "Buy Ticket"
+  },
+  "index": {
+    "head": {
+      "title": "Secret Crush",
+      "description": "Secret Crush - parties, yacht parties, Back To Summer 2016 Bulgaria, tickets and information.",
+      "ogTitle": "Secret Crush - parties, yacht parties, Back To Summer 2016 Bulgaria",
+      "ogDescription": "Secret Crush - parties, yacht parties, Back To Summer 2016 Bulgaria, tickets and information."
+    }
+  },
+  "validation": {},
+  "generic": {
+    "loading": "Loading..",
+    "priceLv": "BGN",
+    "priceEuro": "€"
+  },
+  "layout": {
+    "footer": {
+      "contactText": "Contact us at",
+      "poweredBy": "Created by",
+      "socials": "Follow us"
+    }
+  }
+}

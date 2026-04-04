@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "home": "Начало",
+    "events": "Събития",
+    "yacht": "Яхта Партита",
+    "about": "За Нас",
+    "contacts": "Контакти",
+    "buyTicket": "Купи Билет"
+  },
+  "index": {
+    "head": {
+      "title": "Secret Crush",
+      "description": "Secret Crush - партита, яхта партита, Back To Summer 2016 Bulgaria, билети и информация.",
+      "ogTitle": "Secret Crush - партита, яхта партита, Back To Summer 2016 Bulgaria",
+      "ogDescription": "Secret Crush - партита, яхта партита, Back To Summer 2016 Bulgaria, билети и информация."
+    }
+  },
+  "validation": {},
+  "generic": {
+    "loading": "Зареждане..",
+    "priceLv": "лв.",
+    "priceEuro": "€"
+  },
+  "layout": {
+    "footer": {
+      "contactText": "Свържи се с нас на",
+      "poweredBy": "Създаден от",
+      "socials": "Последвай ни"
+    }
+  }
+}
