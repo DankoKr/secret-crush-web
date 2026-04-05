@@ -11,7 +11,7 @@
 
       <div class="grid lg:grid-cols-[1.3fr_0.7fr] gap-8">
         <div
-          class="p-8 lg:p-12 rounded-[32px] border border-white/10 bg-gradient-to-b from-brand-red/20 to-white/5 reveal"
+          class="p-8 lg:p-12 rounded-[32px] border border-white/10 bg-white/5 reveal hover:border-brand-red/40 hover:-translate-y-1 transition-all"
         >
           <img
             src="/img/logo.png"

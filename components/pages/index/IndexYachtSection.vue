@@ -7,9 +7,6 @@
         >
           Яхта Партита
         </h2>
-        <p class="mt-4 text-brand-secondary-text">
-          Тази секция е по-просторна и по-визуална за вашето VIP преживяване.
-        </p>
       </div>
 
       <div
@@ -28,7 +25,7 @@
             >Featured Yacht Experience</span
           >
           <h3
-            class="text-3xl lg:text-4xl text-brand-primary-text uppercase mb-4"
+            class="font-bold text-3xl lg:text-4xl text-brand-primary-text uppercase mb-4"
           >
             Black Sea Sunset Yacht Party
           </h3>
@@ -43,16 +40,8 @@
             за VIP access и акценти.
           </p>
           <div class="flex gap-4">
-            <button
-              class="bg-brand-red hover:bg-brand-red px-6 py-3 rounded-full font-bold transition-all"
-            >
-              Купи билет
-            </button>
-            <button
-              class="border border-white/10 bg-white/5 px-6 py-3 rounded-full font-bold hover:bg-white/10 transition-all"
-            >
-              Виж детайли
-            </button>
+            <BaseButton title="Купи билет" variant="primary" size="md" />
+            <BaseButton title="Виж детайли" variant="secondary" size="md" />
           </div>
         </div>
       </div>
@@ -61,25 +50,44 @@
         <div
           v-for="(item, index) in mediaItems"
           :key="index"
-          class="relative group overflow-hidden rounded-[26px] border border-white/10 h-72 reveal"
+          @click="openImage(item.src)"
+          class="relative group overflow-hidden rounded-[26px] border border-white/10 h-72 reveal cursor-pointer"
         >
           <img
             :src="item.src"
             :alt="item.label"
             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
-          <div
-            class="absolute bottom-4 left-4 px-3.5 py-2 rounded-full bg-black/45 border border-white/10 backdrop-blur-md text-[12px] uppercase tracking-widest"
-          >
-            {{ item.label }}
-          </div>
         </div>
       </div>
+    </div>
+
+    <div
+      v-if="isImageModalOpen"
+      @click.self="isImageModalOpen = false"
+      class="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
+    >
+      <img
+        v-if="selectedImage"
+        :src="selectedImage"
+        alt="Preview"
+        class="max-h-[90vh] max-w-full object-contain rounded-3xl"
+      />
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
+import BaseButton from "~/components/base/BaseButton.vue";
+
+const selectedImage = ref<string | null>(null);
+const isImageModalOpen = ref(false);
+
+const openImage = (src: string) => {
+  selectedImage.value = src;
+  isImageModalOpen.value = true;
+};
+
 const mediaItems = [
   {
     label: "Photo Slot",

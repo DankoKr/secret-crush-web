@@ -18,18 +18,20 @@
         </p>
 
         <div class="flex flex-wrap gap-3.5 mt-7">
-          <NuxtLink
-            to="#events"
-            class="bg-brand-red hover:bg-brand-red hover:-translate-y-0.5 transition-all px-6 py-3.5 rounded-full font-bold text-brand-primary-text"
-          >
-            Разгледай събития
-          </NuxtLink>
-          <NuxtLink
-            to="#yacht"
-            class="border border-white/10 bg-white/5 hover:bg-white/10 hover:-translate-y-0.5 transition-all px-6 py-3.5 rounded-full font-bold text-brand-primary-text"
-          >
-            Яхта партита
-          </NuxtLink>
+          <BaseButton
+            link
+            :linkTo="'#events'"
+            title="Разгледай събития"
+            variant="primary"
+            size="lg"
+          />
+          <BaseButton
+            link
+            :linkTo="'#yacht'"
+            title="Яхта партита"
+            variant="primary"
+            size="lg"
+          />
         </div>
 
         <div class="mt-8 grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -61,7 +63,7 @@
           <div
             class="absolute left-6 right-6 bottom-6 p-5 rounded-3xl bg-black/45 border border-white/10 backdrop-blur-xl"
           >
-            <span class="text-[11px] text-brand-primary-text uppercase"
+            <span class="text-brand-secondary-text uppercase"
               >Featured Event</span
             >
             <h3 class="text-2xl text-brand-primary-text uppercase mt-2">
@@ -75,6 +77,8 @@
 </template>
 
 <script setup lang="ts">
+import BaseButton from "~/components/base/BaseButton.vue";
+
 const stats = [
   { label: "Кога", value: "16.08.2026" },
   { label: "Формат", value: "Events + Yacht" },

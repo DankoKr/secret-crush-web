@@ -31,24 +31,16 @@
               <span>{{ event.location }}</span>
             </div>
             <h3
-              class="mt-4 text-2xl text-brand-primary-text uppercase leading-tight"
+              class="mt-4 text-2xl font-bold text-brand-primary-text uppercase leading-tight"
             >
               {{ event.title }}
             </h3>
-            <p class="mt-3 text-brand-secondary-text text-sm">
+            <p class="mt-3 text-brand-secondary-text">
               {{ event.description }}
             </p>
             <div class="flex gap-3 mt-6">
-              <button
-                class="bg-brand-red px-4 py-2 rounded-full text-xs font-bold"
-              >
-                Купи билет
-              </button>
-              <button
-                class="border border-white/10 bg-white/5 px-4 py-2 rounded-full text-xs font-bold"
-              >
-                Повече инфо
-              </button>
+              <BaseButton title="Купи билет" variant="primary" size="sm" />
+              <BaseButton title="Повече инфо" variant="secondary" size="sm" />
             </div>
           </div>
         </article>
@@ -58,6 +50,8 @@
 </template>
 
 <script setup lang="ts">
+import BaseButton from "~/components/base/BaseButton.vue";
+
 const events = [
   {
     title: "Back To Summer 2016",

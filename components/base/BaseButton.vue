@@ -45,14 +45,14 @@ const linkToComputed = computed(() => props.linkTo);
 
 const computedClasses = computed(() => {
   const baseClasses =
-    "inline-flex items-center justify-center gap-1 transition-all rounded-xl disabled:opacity-50 no-underline hover:no-underline border border-transparent uppercase";
+    "inline-flex items-center font-bold justify-center gap-1 transition-all rounded-xl disabled:opacity-50 no-underline hover:no-underline border border-transparent uppercase";
 
   const colorVariants = {
     primary:
-      "bg-brand-yellow text-brand-primary-text hover:bg-white hover:border-brand-red-hover",
+      "bg-brand-red text-brand-primary-text hover:bg-brand-red hover:text-brand-primary-text border-transparent",
 
     secondary:
-      "bg-brand-yellow text-brand-primary-text hover:bg-brand-primary-text hover:text-brand-yellow",
+      "bg-transparent text-brand-secondary-text hover:bg-brand-red hover:text-brand-primary-text border-transparent",
 
     white: "bg-white text-black border-white hover:bg-white hover:text-black",
 
