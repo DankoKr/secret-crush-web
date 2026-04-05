@@ -5,7 +5,7 @@
     style="
       background: radial-gradient(
         circle,
-        rgba(64, 224, 208, 0.3) 0%,
+        rgba(255, 50, 95, 0.3) 0%,
         transparent 70%
       );
     "

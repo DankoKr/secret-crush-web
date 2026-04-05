@@ -1,8 +1,10 @@
 <template>
-  <section class="py-24" id="events">
+  <section class="py-32" id="events">
     <div class="container mx-auto px-4">
       <div class="text-center max-w-3xl mx-auto mb-12">
-        <h2 class="text-4xl lg:text-5xl text-brand-primary-text uppercase">
+        <h2
+          class="font-bold text-4xl lg:text-5xl text-brand-primary-text uppercase"
+        >
           Събития
         </h2>
       </div>
@@ -18,10 +20,6 @@
               :src="event.image"
               :alt="event.title"
               class="w-full h-72 object-cover"
-            />
-            <img
-              src="/img/logo.png"
-              class="absolute top-4 right-4 w-14 h-14 rounded-full border border-white/10"
             />
           </div>
           <div class="p-6">

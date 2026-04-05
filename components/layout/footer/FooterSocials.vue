@@ -8,7 +8,7 @@
       rel="noopener noreferrer"
       :aria-label="social.name"
       :style="{ '--bubble-color': social.color }"
-      class="social-bubble flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-sm transition-colors transform hover:bg-[var(--bubble-color)] hover:scale-110"
+      class="social-bubble flex h-12 w-12 items-center justify-center rounded-full bg-brand-secondary-text shadow-sm transition-colors transform hover:bg-[var(--bubble-color)] hover:scale-110"
       @mouseenter="onEnter(social.name)"
       @mouseleave="onLeave(social.name)"
     >

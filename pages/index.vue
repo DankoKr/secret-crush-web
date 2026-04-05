@@ -1,21 +1,17 @@
 <template>
   <main>
     <IndexHeroSection />
-    <IndexHighlightsSection />
     <IndexEventsSection />
     <IndexYachtSection />
     <IndexAboutSection />
-    <IndexContactSection />
   </main>
 </template>
 
 <script setup lang="ts">
 import IndexHeroSection from "@/components/pages/index/IndexHeroSection.vue";
-import IndexHighlightsSection from "@/components/pages/index/IndexHighlightsSection.vue";
 import IndexEventsSection from "@/components/pages/index/IndexEventsSection.vue";
 import IndexYachtSection from "~/components/pages/index/IndexYachtSection.vue";
 import IndexAboutSection from "~/components/pages/index/IndexAboutSection.vue";
-import IndexContactSection from "@/components/pages/index/IndexContactSection.vue";
 
 const { t } = useI18n();
 

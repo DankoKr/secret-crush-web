@@ -3,7 +3,7 @@
     <div class="container mx-auto px-4">
       <div class="text-center max-w-3xl mx-auto mb-12 reveal">
         <h2
-          class="mt-4 text-4xl lg:text-6xl text-brand-primary-text uppercase leading-tight"
+          class="font-bold mt-4 text-4xl lg:text-6xl text-brand-primary-text uppercase leading-tight"
         >
           Яхта Партита
         </h2>
@@ -23,11 +23,6 @@
           />
         </div>
         <div class="p-8 lg:p-12 flex flex-col justify-center">
-          <img
-            src="/img/logo.png"
-            alt="Secret Crush"
-            class="w-16 h-16 rounded-full border border-white/10 mb-4"
-          />
           <span
             class="text-[11px] text-[#ff97ac] uppercase tracking-widest mb-2"
             >Featured Yacht Experience</span

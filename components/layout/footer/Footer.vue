@@ -2,18 +2,24 @@
   <footer class="bg-black w-full py-10 px-6 border-t border-zinc-800">
     <div class="mx-auto max-w-2xl flex flex-col items-center">
       <FooterSocials :socials="socials" />
+
+      <p class="mt-6 text-sm text-white/60">
+        © {{ year }} Secret Crush. All rights reserved.
+      </p>
     </div>
   </footer>
 </template>
+
 <script setup lang="ts">
 import FooterSocials from "./FooterSocials.vue";
 
 const { t } = useI18n();
+const year = new Date().getFullYear();
 
 const socials = [
-  { name: "Facebook", icon: "facebook-f", href: "...", color: "#3B5998" },
-  { name: "Instagram", icon: "instagram", href: "...", color: "#33ccff" },
-  { name: "YouTube", icon: "youtube", href: "...", color: "#BD3518" },
+  { name: "Facebook", icon: "facebook-f", href: "...", color: "#FF325F" },
+  { name: "Instagram", icon: "instagram", href: "...", color: "#FF325F" },
+  { name: "YouTube", icon: "youtube", href: "...", color: "#FF325F" },
 ];
 
 const legalLinks = computed(() => [

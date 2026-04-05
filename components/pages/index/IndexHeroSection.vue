@@ -1,15 +1,11 @@
 <template>
-  <section class="relative min-h-screen flex items-center pt-20" id="home">
+  <section class="container flex items-center py-24" id="home">
     <div
-      class="absolute inset-0 pointer-events-none bg-gradient-to-b from-black/45 to-[#070707ef] bg-[radial-gradient(circle_at_top_left,rgba(255,51,95,0.14),transparent_30%)]"
-    ></div>
-
-    <div
-      class="container mx-auto px-4 relative grid lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center"
+      class="mx-auto px-4 relative grid lg:grid-cols-[1.05fr_0.95fr] gap-8 items-center"
     >
       <div class="reveal">
         <h1
-          class="mt-5 text-4xl lg:text-7xl xl:text-8xl font-bold text-brand-primary-text uppercase leading-[0.98]"
+          class="mt-5 text-2xl lg:text-6xl font-bold text-brand-primary-text uppercase leading-[0.98]"
         >
           Най-горещите
           <span class="font-bold text-brand-red">парти събития</span> и
@@ -36,17 +32,19 @@
           </NuxtLink>
         </div>
 
-        <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-3.5">
+        <div class="mt-8 grid grid-cols-2 md:grid-cols-3 gap-3">
           <div
             v-for="stat in stats"
             :key="stat.label"
             class="p-4 rounded-[22px] border border-white/10 bg-white/5 backdrop-blur-md"
           >
             <span
-              class="block text-[11px] uppercase tracking-widest text-brand-primary-text/45"
+              class="block uppercase tracking-widest text-brand-secondary-text"
               >{{ stat.label }}</span
             >
-            <strong class="block mt-2 text-sm">{{ stat.value }}</strong>
+            <strong class="block mt-2 text-brand-primary-text">{{
+              stat.value
+            }}</strong>
           </div>
         </div>
       </div>
@@ -63,7 +61,7 @@
           <div
             class="absolute left-6 right-6 bottom-6 p-5 rounded-3xl bg-black/45 border border-white/10 backdrop-blur-xl"
           >
-            <span class="text-[11px] text-[#ff97ac] uppercase tracking-widest"
+            <span class="text-[11px] text-brand-primary-text uppercase"
               >Featured Event</span
             >
             <h3 class="text-2xl text-brand-primary-text uppercase mt-2">
@@ -78,10 +76,9 @@
 
 <script setup lang="ts">
 const stats = [
-  { label: "Следващ евент", value: "16.08.2026" },
-  { label: "Основен формат", value: "Events + Yacht" },
-  { label: "Локации", value: "София / Черноморие" },
-  { label: "Платформа", value: "Mobile First" },
+  { label: "Кога", value: "16.08.2026" },
+  { label: "Формат", value: "Events + Yacht" },
+  { label: "Къде", value: "София / Черноморие" },
 ];
 </script>
 
