@@ -2,11 +2,9 @@
   <section class="py-24" id="about">
     <div class="container mx-auto px-4">
       <div class="text-center max-w-3xl mx-auto mb-12 reveal">
-        <span
-          class="inline-block px-3 py-1 border border-brand-red-light/25 bg-brand-red/10 text-[#ff90a5] rounded-full text-[11px] font-bold tracking-widest uppercase"
-          >About</span
-        >
-        <h2 class="mt-4 text-4xl lg:text-5xl font-black uppercase">За Нас</h2>
+        <h2 class="mt-4 text-4xl lg:text-5xl text-brand-primary-text uppercase">
+          За Нас
+        </h2>
       </div>
 
       <div class="grid lg:grid-cols-[0.95fr_1.05fr] gap-8">
@@ -18,7 +16,9 @@
             alt="Secret Crush logo"
             class="w-24 h-24 rounded-full border border-white/10 mb-6"
           />
-          <h3 class="text-4xl font-black uppercase mb-6 leading-none">
+          <h3
+            class="text-4xl text-brand-primary-text uppercase mb-6 leading-none"
+          >
             Secret Crush
           </h3>
           <p class="text-brand-secondary-text text-lg leading-relaxed max-w-lg">
@@ -32,7 +32,7 @@
           <div
             v-for="point in points"
             :key="point.title"
-            class="p-8 rounded-[28px] border border-white/10 bg-white/5 hover:border-brand-red-light/40 hover:-translate-y-1 transition-all reveal"
+            class="p-8 rounded-[28px] border border-white/10 bg-white/5 hover:border-brand-red/40 hover:-translate-y-1 transition-all reveal"
           >
             <h4
               class="text-xl font-extrabold uppercase text-brand-primary-text"

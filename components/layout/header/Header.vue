@@ -1,6 +1,6 @@
 <template>
   <header
-    class="bg-black text-white sticky top-0 z-50 border-b border-zinc-800"
+    class="bg-black text-brand-primary-text sticky top-0 z-50 border-b border-zinc-800"
   >
     <div class="container mx-auto flex items-center gap-4 px-4 py-4">
       <div class="flex items-center gap-3">
@@ -19,7 +19,7 @@
           <NuxtLink
             v-if="otherLocale"
             :to="switchLocalePath(otherLocale.code)"
-            class="text-brand-secondary-text hover:text-white uppercase"
+            class="text-brand-secondary-text hover:text-brand-primary-text uppercase"
           >
             {{ otherLocale.code }}
           </NuxtLink>
@@ -28,7 +28,7 @@
 
       <button
         @click="isMenuOpen = !isMenuOpen"
-        class="lg:hidden p-2 text-white ml-auto"
+        class="lg:hidden p-2 text-brand-primary-text ml-auto"
         aria-label="Toggle Menu"
       >
         <svg

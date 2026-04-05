@@ -29,7 +29,7 @@
           class="w-8 h-8 flex items-center justify-center rounded transition-colors"
           :class="
             page === currentPage
-              ? 'bg-brand-green text-white'
+              ? 'bg-brand-green text-brand-primary-text'
               : 'border hover:bg-gray-100'
           "
           aria-label="Page number"
@@ -96,7 +96,7 @@ const displayedPages = computed(() => {
         "...",
         props.totalPages - 3,
         props.totalPages - 2,
-        props.totalPages - 1
+        props.totalPages - 1,
       );
     } else {
       result.push(
@@ -104,7 +104,7 @@ const displayedPages = computed(() => {
         props.currentPage - 1,
         props.currentPage,
         props.currentPage + 1,
-        "..."
+        "...",
       );
     }
 

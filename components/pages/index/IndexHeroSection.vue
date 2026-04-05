@@ -8,32 +8,29 @@
       class="container mx-auto px-4 relative grid lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center"
     >
       <div class="reveal">
-        <div
-          class="inline-block px-3.5 py-2 border border-brand-red-light/25 bg-brand-red/10 text-[#ff90a5] rounded-full text-[11px] font-bold tracking-[0.28em] uppercase"
-        >
-          Secret Crush Experience
-        </div>
         <h1
-          class="mt-5 text-4xl lg:text-7xl xl:text-8xl font-black uppercase leading-[0.98]"
+          class="mt-5 text-4xl lg:text-7xl xl:text-8xl font-bold text-brand-primary-text uppercase leading-[0.98]"
         >
-          Най-горещите <span class="text-brand-red-light">парти събития</span> и
-          <span class="text-brand-red-light">яхта партита</span> това лято
+          Най-горещите
+          <span class="font-bold text-brand-red">парти събития</span> и
+          <span class="font-bold text-brand-red">яхта партита</span> това лято
         </h1>
         <p class="max-w-[680px] mt-5 text-lg text-brand-secondary-text">
           Secret Crush създава модерни евенти с тъмна premium визия, енергична
-          атмосфера и ясна информация.
+          атмосфера и ясна информация за всяко събитие. Тук хората могат лесно
+          да разгледат програмата и да стигнат до бутона за билети.
         </p>
 
         <div class="flex flex-wrap gap-3.5 mt-7">
           <NuxtLink
             to="#events"
-            class="bg-brand-red hover:bg-brand-red-light hover:-translate-y-0.5 transition-all px-6 py-3.5 rounded-full font-bold text-white"
+            class="bg-brand-red hover:bg-brand-red hover:-translate-y-0.5 transition-all px-6 py-3.5 rounded-full font-bold text-brand-primary-text"
           >
             Разгледай събития
           </NuxtLink>
           <NuxtLink
             to="#yacht"
-            class="border border-white/10 bg-white/5 hover:bg-white/10 hover:-translate-y-0.5 transition-all px-6 py-3.5 rounded-full font-bold text-white"
+            class="border border-white/10 bg-white/5 hover:bg-white/10 hover:-translate-y-0.5 transition-all px-6 py-3.5 rounded-full font-bold text-brand-primary-text"
           >
             Яхта партита
           </NuxtLink>
@@ -46,7 +43,7 @@
             class="p-4 rounded-[22px] border border-white/10 bg-white/5 backdrop-blur-md"
           >
             <span
-              class="block text-[11px] uppercase tracking-widest text-white/45"
+              class="block text-[11px] uppercase tracking-widest text-brand-primary-text/45"
               >{{ stat.label }}</span
             >
             <strong class="block mt-2 text-sm">{{ stat.value }}</strong>
@@ -59,11 +56,6 @@
           class="relative overflow-hidden rounded-[34px] p-3.5 border border-white/10 bg-gradient-to-b from-white/10 to-white/5 shadow-2xl animate-bounce-slow"
         >
           <img
-            src="/img/logo.png"
-            alt="Logo"
-            class="absolute top-6 right-6 w-18 h-18 rounded-full border border-white/10 z-10"
-          />
-          <img
             src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1200&q=80"
             alt="Event"
             class="w-full h-[560px] object-cover rounded-[26px]"
@@ -74,7 +66,7 @@
             <span class="text-[11px] text-[#ff97ac] uppercase tracking-widest"
               >Featured Event</span
             >
-            <h3 class="text-2xl font-black uppercase mt-2">
+            <h3 class="text-2xl text-brand-primary-text uppercase mt-2">
               Back To Summer 2016 Bulgaria
             </h3>
           </div>

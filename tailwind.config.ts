@@ -21,8 +21,7 @@ export default <Config>{
       colors: {
         transparent: "transparent",
         current: "currentColor",
-        "brand-red": "#d90429",
-        "brand-red-light": "#ff335f",
+        "brand-red": "#FF325F",
         "brand-primary-text": "#ffffff",
         "brand-secondary-text": "#BBB8B8",
         "brand-bg": "#070707",

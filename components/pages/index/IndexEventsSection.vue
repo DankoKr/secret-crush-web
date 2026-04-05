@@ -2,14 +2,16 @@
   <section class="py-24" id="events">
     <div class="container mx-auto px-4">
       <div class="text-center max-w-3xl mx-auto mb-12">
-        <h2 class="text-4xl lg:text-5xl font-black uppercase">Събития</h2>
+        <h2 class="text-4xl lg:text-5xl text-brand-primary-text uppercase">
+          Събития
+        </h2>
       </div>
 
       <div class="grid md:grid-cols-3 gap-6">
         <article
           v-for="event in events"
           :key="event.title"
-          class="group rounded-[30px] overflow-hidden border border-white/10 bg-white/5 hover:border-brand-red-light/40 hover:-translate-y-1.5 transition-all"
+          class="group rounded-[30px] overflow-hidden border border-white/10 bg-white/5 hover:border-brand-red/40 hover:-translate-y-1.5 transition-all"
         >
           <div class="relative">
             <img
@@ -30,7 +32,9 @@
               <span>•</span>
               <span>{{ event.location }}</span>
             </div>
-            <h3 class="mt-4 text-2xl font-black uppercase leading-tight">
+            <h3
+              class="mt-4 text-2xl text-brand-primary-text uppercase leading-tight"
+            >
               {{ event.title }}
             </h3>
             <p class="mt-3 text-brand-secondary-text text-sm">

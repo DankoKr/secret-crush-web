@@ -2,13 +2,8 @@
   <section class="py-24" id="yacht">
     <div class="container mx-auto px-4">
       <div class="text-center max-w-3xl mx-auto mb-12 reveal">
-        <span
-          class="inline-block px-3 py-1 border border-brand-red-light/25 bg-brand-red/10 text-[#ff90a5] rounded-full text-[11px] font-bold tracking-[0.28em] uppercase"
-        >
-          Yacht Parties
-        </span>
         <h2
-          class="mt-4 text-4xl lg:text-6xl font-black uppercase leading-tight"
+          class="mt-4 text-4xl lg:text-6xl text-brand-primary-text uppercase leading-tight"
         >
           Яхта Партита
         </h2>
@@ -37,7 +32,9 @@
             class="text-[11px] text-[#ff97ac] uppercase tracking-widest mb-2"
             >Featured Yacht Experience</span
           >
-          <h3 class="text-3xl lg:text-4xl font-black uppercase mb-4">
+          <h3
+            class="text-3xl lg:text-4xl text-brand-primary-text uppercase mb-4"
+          >
             Black Sea Sunset Yacht Party
           </h3>
           <div
@@ -52,7 +49,7 @@
           </p>
           <div class="flex gap-4">
             <button
-              class="bg-brand-red hover:bg-brand-red-light px-6 py-3 rounded-full font-bold transition-all"
+              class="bg-brand-red hover:bg-brand-red px-6 py-3 rounded-full font-bold transition-all"
             >
               Купи билет
             </button>
