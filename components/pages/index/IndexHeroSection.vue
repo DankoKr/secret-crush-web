@@ -5,7 +5,7 @@
     >
       <div class="reveal">
         <h1
-          class="mt-5 text-2xl lg:text-5xl font-bold text-brand-primary-text uppercase"
+          class="mt-5 text-4xl lg:text-5xl font-bold text-brand-primary-text uppercase"
         >
           {{ t("index.hero.headline.part1") }}
           <span class="font-bold text-brand-red">
@@ -55,7 +55,7 @@
         </div>
       </div>
 
-      <div class="relative group hidden lg:block">
+      <div class="relative group">
         <div
           class="relative overflow-hidden rounded-[34px] p-3.5 border border-white/10 bg-gradient-to-b from-white/10 to-white/5 shadow-2xl animate-bounce-slow"
         >
@@ -70,7 +70,9 @@
             <span class="text-brand-secondary-text uppercase">{{
               t("index.hero.featured.label")
             }}</span>
-            <h3 class="text-2xl text-brand-primary-text uppercase mt-2">
+            <h3
+              class="md:text-2xl text-xl text-brand-primary-text uppercase mt-2"
+            >
               {{ t("index.hero.featured.title") }}
             </h3>
           </div>

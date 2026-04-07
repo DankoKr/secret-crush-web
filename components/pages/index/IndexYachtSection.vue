@@ -10,16 +10,19 @@
       </div>
 
       <div
-        class="grid lg:grid-cols-[1.1fr_0.9fr] overflow-hidden rounded-[34px] border border-white/10 bg-white/5 shadow-2xl reveal"
+        class="grid grid-cols-1 gap-6 lg:grid-cols-[1.1fr_0.9fr] overflow-hidden rounded-[34px] border border-white/10 bg-white/5 shadow-2xl reveal"
       >
-        <div class="h-[430px] lg:h-full">
+        <div
+          class="order-last lg:order-none h-auto min-h-[280px] cursor-pointer"
+          @click="openImage(mainImageSrc)"
+        >
           <img
-            src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80"
+            :src="mainImageSrc"
             alt="Yacht party"
             class="w-full h-full object-cover"
           />
         </div>
-        <div class="p-8 lg:p-12 flex flex-col justify-center">
+        <div class="p-6 lg:p-12 flex flex-col justify-center gap-6">
           <span
             class="text-[11px] text-[#ff97ac] uppercase tracking-widest mb-2"
           >
@@ -52,7 +55,7 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
         <div
           v-for="(item, index) in mediaItems"
           :key="index"
@@ -114,4 +117,8 @@ const openImage = (src: string) => {
   selectedImage.value = src;
   isImageModalOpen.value = true;
 };
+
+const mainImageSrc = computed(() => {
+  return "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80";
+});
 </script>
