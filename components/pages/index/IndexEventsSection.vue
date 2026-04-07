@@ -48,17 +48,25 @@
                 :title="t('index.events.buttons.moreInfo')"
                 variant="secondary"
                 size="sm"
+                @click="openEventDescription(event)"
               />
             </div>
           </div>
         </article>
       </div>
     </div>
+
+    <IndexEventDescriptionModal
+      v-model="isEventModalOpen"
+      :event="selectedEvent"
+    />
   </section>
 </template>
 
 <script setup lang="ts">
 import BaseButton from "~/components/base/BaseButton.vue";
+import type { EventItem } from "~/components/pages/index/IndexEventDescriptionModal.vue";
+import IndexEventDescriptionModal from "~/components/pages/index/IndexEventDescriptionModal.vue";
 
 const { t } = useI18n();
 
@@ -88,4 +96,12 @@ const events = computed(() => [
     description: t("index.events.items.redKissRooftop.description"),
   },
 ]);
+
+const selectedEvent = ref<EventItem | null>(null);
+const isEventModalOpen = ref(false);
+
+const openEventDescription = (event: EventItem) => {
+  selectedEvent.value = event;
+  isEventModalOpen.value = true;
+};
 </script>

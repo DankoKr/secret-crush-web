@@ -4,18 +4,22 @@
       <div
         v-if="modelValue"
         :id="id"
-        class="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm px-4 py-6"
         role="dialog"
       >
         <div
-          class="bg-white rounded-2xl shadow-xl w-full max-w-[var(--bs-modal-width)]"
+          class="w-full max-w-[var(--bs-modal-width)] rounded-[34px] border border-white/10 bg-black/90 shadow-[0_30px_80px_rgba(0,0,0,0.45)]"
           :style="{ '--bs-modal-width': width }"
         >
-          <div class="flex justify-between items-center p-3 border-b">
-            <h3 class="text-2xl">{{ modalTitle }}</h3>
+          <div
+            class="flex justify-between items-center p-6 border-b border-white/10"
+          >
+            <h3 class="text-3xl font-black text-brand-primary-text">
+              {{ modalTitle }}
+            </h3>
 
             <button
-              class="p-2 text-gray-400 hover:text-brand-secondary-text cursor-pointer rounded-lg hover:bg-gray-100"
+              class="p-3 text-brand-secondary-text rounded-2xl hover:bg-white/10 hover:text-brand-primary-text transition"
               aria-label="Close modal"
               title="Close modal"
               @click="closeModal"
@@ -26,8 +30,8 @@
             </button>
           </div>
 
-          <div class="p-4">
-            <div class="space-y-1">
+          <div class="p-6">
+            <div class="space-y-4">
               <slot />
             </div>
           </div>
