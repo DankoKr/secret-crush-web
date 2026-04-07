@@ -17,18 +17,17 @@ const { t } = useI18n();
 const year = new Date().getFullYear();
 
 const socials = [
-  { name: "Facebook", icon: "facebook-f", href: "...", color: "#FF325F" },
-  { name: "Instagram", icon: "instagram", href: "...", color: "#FF325F" },
-  { name: "YouTube", icon: "youtube", href: "...", color: "#FF325F" },
-];
-
-const legalLinks = computed(() => [
-  { label: t("layout.footer.legal.cookies"), to: "/cookies" },
-  { label: t("layout.footer.legal.personalData"), to: "/personal-data" },
-  { label: t("layout.footer.legal.privacyPolicy"), to: "/privacy-policy" },
   {
-    label: t("layout.footer.legal.terms"),
-    to: "/terms-and-conditions-plfamily",
+    name: "TikTok",
+    icon: "tiktok",
+    href: "https://www.tiktok.com/@secret_crush.17?_r=1&_t=ZN-95HjNH6YLDi",
+    color: "#FF325F",
   },
-]);
+  {
+    name: "Instagram",
+    icon: "instagram",
+    href: "https://www.instagram.com/secretcrush.17?igsh=YTkzOWZzbDU1c2U3",
+    color: "#FF325F",
+  },
+];
 </script>
