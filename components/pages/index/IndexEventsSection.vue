@@ -5,7 +5,7 @@
         <h2
           class="font-bold text-4xl lg:text-5xl text-brand-primary-text uppercase"
         >
-          Събития
+          {{ t("index.events.title") }}
         </h2>
       </div>
 
@@ -39,8 +39,16 @@
               {{ event.description }}
             </p>
             <div class="flex gap-3 mt-6">
-              <BaseButton title="Купи билет" variant="primary" size="sm" />
-              <BaseButton title="Повече инфо" variant="secondary" size="sm" />
+              <BaseButton
+                :title="t('index.events.buttons.buyTicket')"
+                variant="primary"
+                size="sm"
+              />
+              <BaseButton
+                :title="t('index.events.buttons.moreInfo')"
+                variant="secondary"
+                size="sm"
+              />
             </div>
           </div>
         </article>
@@ -52,31 +60,32 @@
 <script setup lang="ts">
 import BaseButton from "~/components/base/BaseButton.vue";
 
-const events = [
+const { t } = useI18n();
+
+const events = computed(() => [
   {
-    title: "Back To Summer 2016",
-    date: "16 авг 2026",
-    location: "София",
+    title: t("index.events.items.backToSummer.title"),
+    date: t("index.events.items.backToSummer.date"),
+    location: t("index.events.items.backToSummer.location"),
     image:
       "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1200&q=80",
-    description: "Основен summer event с голяма публика и premium night vibe.",
+    description: t("index.events.items.backToSummer.description"),
   },
   {
-    title: "Midnight Heat",
-    date: "30 авг 2026",
-    location: "Пловдив",
+    title: t("index.events.items.midnightHeat.title"),
+    date: t("index.events.items.midnightHeat.date"),
+    location: t("index.events.items.midnightHeat.location"),
     image:
       "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=80",
-    description:
-      "Тъмен клубен евент с модерни светлини и elegant party настроение.",
+    description: t("index.events.items.midnightHeat.description"),
   },
   {
-    title: "Red Kiss Rooftop",
-    date: "12 сеп 2026",
-    location: "Варна",
+    title: t("index.events.items.redKissRooftop.title"),
+    date: t("index.events.items.redKissRooftop.date"),
+    location: t("index.events.items.redKissRooftop.location"),
     image:
       "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=1200&q=80",
-    description: "Sunset rooftop атмосфера, коктейли и deep house настроение.",
+    description: t("index.events.items.redKissRooftop.description"),
   },
-];
+]);
 </script>

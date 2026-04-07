@@ -5,7 +5,7 @@
         <h2
           class="font-bold mt-4 text-4xl lg:text-6xl text-brand-primary-text uppercase leading-tight"
         >
-          Яхта Партита
+          {{ t("index.yacht.title") }}
         </h2>
       </div>
 
@@ -22,26 +22,32 @@
         <div class="p-8 lg:p-12 flex flex-col justify-center">
           <span
             class="text-[11px] text-[#ff97ac] uppercase tracking-widest mb-2"
-            >Featured Yacht Experience</span
           >
+            {{ t("index.yacht.featuredLabel") }}
+          </span>
           <h3
             class="font-bold text-3xl lg:text-4xl text-brand-primary-text uppercase mb-4"
           >
-            Black Sea Sunset Yacht Party
+            {{ t("index.yacht.featuredTitle") }}
           </h3>
           <div
             class="flex flex-wrap gap-4 text-[#ff9fb0] text-[12px] uppercase tracking-widest mb-6"
           >
-            <span>Всяка събота | Юли–Август</span>
-            <span>Варна Марина</span>
+            <span>{{ t("index.yacht.schedule") }}</span>
+            <span>{{ t("index.yacht.location") }}</span>
           </div>
-          <p class="text-brand-secondary-text mb-8">
-            Идеална секция за основното яхта парти — с достатъчно пространство
-            за VIP access и акценти.
-          </p>
+          <p class="mb-5 text-white">{{ t("index.yacht.description") }}</p>
           <div class="flex gap-4">
-            <BaseButton title="Купи билет" variant="primary" size="md" />
-            <BaseButton title="Виж детайли" variant="secondary" size="md" />
+            <BaseButton
+              :title="t('index.yacht.buttons.buyTicket')"
+              variant="primary"
+              size="md"
+            />
+            <BaseButton
+              :title="t('index.yacht.buttons.viewDetails')"
+              variant="secondary"
+              size="md"
+            />
           </div>
         </div>
       </div>
@@ -80,6 +86,27 @@
 <script setup lang="ts">
 import BaseButton from "~/components/base/BaseButton.vue";
 
+const { t } = useI18n();
+
+const mediaItems = computed(() => [
+  {
+    label: t("index.yacht.gallery.photoSlot"),
+    src: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    label: t("index.yacht.gallery.videoSlot"),
+    src: "https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    label: t("index.yacht.gallery.photoSlot"),
+    src: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    label: t("index.yacht.gallery.videoSlot"),
+    src: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1200&q=80",
+  },
+]);
+
 const selectedImage = ref<string | null>(null);
 const isImageModalOpen = ref(false);
 
@@ -87,23 +114,4 @@ const openImage = (src: string) => {
   selectedImage.value = src;
   isImageModalOpen.value = true;
 };
-
-const mediaItems = [
-  {
-    label: "Photo Slot",
-    src: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80",
-  },
-  {
-    label: "Video Slot",
-    src: "https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=1200&q=80",
-  },
-  {
-    label: "Photo Slot",
-    src: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=80",
-  },
-  {
-    label: "Video Slot",
-    src: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1200&q=80",
-  },
-];
 </script>

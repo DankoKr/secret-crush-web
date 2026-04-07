@@ -8,7 +8,7 @@
         <div class="hidden md:flex flex-col leading-tight">
           <span class="text-base font-semibold uppercase">Secret Crush</span>
           <span class="text-sm text-brand-secondary-text">
-            Party Events & Yacht Parties
+            {{ t("layout.header.logoSubtext") }}
           </span>
         </div>
       </div>
@@ -94,6 +94,7 @@ import Logo from "./Logo.vue";
 const { locale, locales } = useI18n();
 const switchLocalePath = useSwitchLocalePath();
 const route = useRoute();
+const { t } = useI18n();
 
 const otherLocale = computed(() =>
   locales.value.find((l) => l.code !== locale.value),

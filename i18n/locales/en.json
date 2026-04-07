@@ -10,9 +10,86 @@
   "index": {
     "head": {
       "title": "Secret Crush",
-      "description": "Secret Crush - parties, yacht parties, Back To Summer 2016 Bulgaria, tickets and information.",
-      "ogTitle": "Secret Crush - parties, yacht parties, Back To Summer 2016 Bulgaria",
-      "ogDescription": "Secret Crush - parties, yacht parties, Back To Summer 2016 Bulgaria, tickets and information."
+      "description": "Secret Crush - parties, yacht parties, Back To Summer 2026 Bulgaria, tickets and information.",
+      "ogTitle": "Secret Crush - parties, yacht parties, Back To Summer 2026 Bulgaria",
+      "ogDescription": "Secret Crush - parties, yacht parties, Back To Summer 2026 Bulgaria, tickets and information."
+    },
+    "hero": {
+      "headline": {
+        "part1": "The hottest",
+        "emphasis1": "party events",
+        "middle": "and",
+        "emphasis2": "yacht parties",
+        "part2": "this summer"
+      },
+      "subtitle": "Secret Crush creates modern events with a dark premium look, energetic atmosphere, and clear information for every event. Here people can easily review the schedule and reach the ticket button.",
+      "buttons": {
+        "exploreEvents": "Explore Events",
+        "yachtParties": "Yacht Parties"
+      },
+      "featured": {
+        "label": "Featured Event",
+        "title": "Back To Summer 2026 Bulgaria"
+      },
+      "stats": {
+        "when": "When",
+        "whenValue": "16.08.2026",
+        "format": "Format",
+        "formatValue": "Events + Yacht",
+        "where": "Where",
+        "whereValue": "Sofia / Black Sea Coast"
+      }
+    },
+    "yacht": {
+      "title": "Yacht Parties",
+      "featuredLabel": "Featured Yacht Experience",
+      "featuredTitle": "Black Sea Sunset Yacht Party",
+      "schedule": "Every Saturday | July–August",
+      "location": "Varna Marina",
+      "description": "Perfect section for the main yacht party — with enough space for VIP access and highlights.",
+      "buttons": {
+        "buyTicket": "Buy Ticket",
+        "viewDetails": "View Details"
+      },
+      "gallery": {
+        "photoSlot": "Photo Slot",
+        "videoSlot": "Video Slot"
+      }
+    },
+    "events": {
+      "title": "Events",
+      "buttons": {
+        "buyTicket": "Buy Ticket",
+        "moreInfo": "More Info"
+      },
+      "items": {
+        "backToSummer": {
+          "title": "Back To Summer 2026",
+          "date": "16 Aug 2026",
+          "location": "Sofia",
+          "description": "Main summer event with a large crowd and premium night vibe."
+        },
+        "midnightHeat": {
+          "title": "Midnight Heat",
+          "date": "30 Aug 2026",
+          "location": "Plovdiv",
+          "description": "Dark club event with modern lights and elegant party energy."
+        },
+        "redKissRooftop": {
+          "title": "Red Kiss Rooftop",
+          "date": "12 Sep 2026",
+          "location": "Varna",
+          "description": "Sunset rooftop atmosphere, cocktails and deep house mood."
+        }
+      }
+    },
+    "about": {
+      "title": "About Us",
+      "description": "Secret Crush organizes modern party events and yacht parties with a dark, luxurious, social-first look. The brand communicates not just events, but a feeling, style, and belonging.",
+      "contacts": {
+        "phone": "Phone",
+        "email": "Email"
+      }
     }
   },
   "validation": {},
@@ -23,9 +100,10 @@
   },
   "layout": {
     "footer": {
-      "contactText": "Contact us at",
-      "poweredBy": "Created by",
-      "socials": "Follow us"
+      "copyright": " Secret Crush. All rights reserved."
+    },
+    "header": {
+      "logoSubtext": "Party Events & Yacht Parties"
     }
   }
 }

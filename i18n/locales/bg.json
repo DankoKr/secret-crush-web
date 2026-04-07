@@ -10,9 +10,86 @@
   "index": {
     "head": {
       "title": "Secret Crush",
-      "description": "Secret Crush - партита, яхта партита, Back To Summer 2016 Bulgaria, билети и информация.",
-      "ogTitle": "Secret Crush - партита, яхта партита, Back To Summer 2016 Bulgaria",
-      "ogDescription": "Secret Crush - партита, яхта партита, Back To Summer 2016 Bulgaria, билети и информация."
+      "description": "Secret Crush - партита, яхта партита, Back To Summer 2026 Bulgaria, билети и информация.",
+      "ogTitle": "Secret Crush - партита, яхта партита, Back To Summer 2026 Bulgaria",
+      "ogDescription": "Secret Crush - партита, яхта партита, Back To Summer 2026 Bulgaria, билети и информация."
+    },
+    "hero": {
+      "headline": {
+        "part1": "Най-горещите",
+        "emphasis1": "парти събития",
+        "middle": "и",
+        "emphasis2": "яхта партита",
+        "part2": "това лято"
+      },
+      "subtitle": "Secret Crush създава модерни евенти с тъмна premium визия, енергична атмосфера и ясна информация за всяко събитие. Тук хората могат лесно да разгледат програмата и да стигнат до бутона за билети.",
+      "buttons": {
+        "exploreEvents": "Разгледай събития",
+        "yachtParties": "Яхта партита"
+      },
+      "featured": {
+        "label": "Препоръчано събитие",
+        "title": "Back To Summer 2026 Bulgaria"
+      },
+      "stats": {
+        "when": "Кога",
+        "whenValue": "16.08.2026",
+        "format": "Формат",
+        "formatValue": "Events + Yacht",
+        "where": "Къде",
+        "whereValue": "София / Черноморие"
+      }
+    },
+    "yacht": {
+      "title": "Яхта Партита",
+      "featuredLabel": "Препоръчано преживяване",
+      "featuredTitle": "Black Sea Sunset Yacht Party",
+      "schedule": "Всяка събота | Юли–Август",
+      "location": "Варна Марина",
+      "description": "Идеална секция за основното яхта парти — с достатъчно пространство за VIP достъп и акценти.",
+      "buttons": {
+        "buyTicket": "Купи билет",
+        "viewDetails": "Виж детайли"
+      },
+      "gallery": {
+        "photoSlot": "Фото слот",
+        "videoSlot": "Видео слот"
+      }
+    },
+    "events": {
+      "title": "Събития",
+      "buttons": {
+        "buyTicket": "Купи билет",
+        "moreInfo": "Повече инфо"
+      },
+      "items": {
+        "backToSummer": {
+          "title": "Back To Summer 2026",
+          "date": "16 авг 2026",
+          "location": "София",
+          "description": "Основен summer event с голяма публика и premium night vibe."
+        },
+        "midnightHeat": {
+          "title": "Midnight Heat",
+          "date": "30 авг 2026",
+          "location": "Пловдив",
+          "description": "Тъмен клубен евент с модерни светлини и elegant party настроение."
+        },
+        "redKissRooftop": {
+          "title": "Red Kiss Rooftop",
+          "date": "12 сеп 2026",
+          "location": "Варна",
+          "description": "Sunset rooftop атмосфера, коктейли и deep house настроение."
+        }
+      }
+    },
+    "about": {
+      "title": "За Нас",
+      "description": "Secret Crush организира модерни party events и яхта партита с тъмен, луксозен, social-first облик. Брандът комуникира не просто събития, а усещане, стил и принадлежност.",
+      "contacts": {
+        "phone": "Телефон",
+        "email": "Email"
+      }
     }
   },
   "validation": {},
@@ -23,9 +100,10 @@
   },
   "layout": {
     "footer": {
-      "contactText": "Свържи се с нас на",
-      "poweredBy": "Създаден от",
-      "socials": "Последвай ни"
+      "copyright": " Secret Crush. Всички права запазени."
+    },
+    "header": {
+      "logoSubtext": "Парти Събития & Яхта Партита"
     }
   }
 }

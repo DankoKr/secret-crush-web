@@ -4,7 +4,7 @@
       <FooterSocials :socials="socials" />
 
       <p class="mt-6 text-sm text-white/60">
-        © {{ year }} Secret Crush. All rights reserved.
+        © {{ year }} {{ t("layout.footer.copyright") }}
       </p>
     </div>
   </footer>

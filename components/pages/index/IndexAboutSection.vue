@@ -5,7 +5,7 @@
         <h2
           class="mt-4 font-bold text-4xl lg:text-5xl text-brand-primary-text uppercase"
         >
-          За Нас
+          {{ t("index.about.title") }}
         </h2>
       </div>
 
@@ -19,9 +19,7 @@
             class="w-[160px] h-[90px] mb-6"
           />
           <p class="text-brand-secondary-text text-lg">
-            Secret Crush организира модерни party events и яхта партита с тъмен,
-            луксозен, social-first облик. Брандът комуникира не просто събития,
-            а усещане, стил и принадлежност.
+            {{ t("index.about.description") }}
           </p>
         </div>
 
@@ -45,8 +43,10 @@
 </template>
 
 <script setup lang="ts">
-const contacts = [
-  { title: "Телефон", desc: "+359 888 123 456" },
-  { title: "Email", desc: "hello@secretcrush.bg" },
-];
+const { t } = useI18n();
+
+const contacts = computed(() => [
+  { title: t("index.about.contacts.phone"), desc: "+359 888 123 456" },
+  { title: t("index.about.contacts.email"), desc: "hello@secretcrush.bg" },
+]);
 </script>
