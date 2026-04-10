@@ -79,18 +79,13 @@ export type ValidationRule = {
 export const BEARER_TOKEN = "token";
 export const EMAIL = "email";
 
-// This is because the backend expects it this way
-export enum FormType {
-  EMAIL = "FormEmail",
-  CITY = "FormCity",
-  NAME = "FormName",
-  PHONE = "FormPhone",
-  BIRTH_DATE = "FormBirthDate",
-  APPLY_FOR = "FormApplyFor",
-  TERMS_ACCEPTED = "termsCheckJob",
-}
-
 export interface ErrorResponse {
   done: boolean;
   err: string;
+}
+
+export interface Image {
+  imageUrl: string;
+  thumbnailUrl?: string;
+  fileName: string;
 }

@@ -2,7 +2,7 @@
   <div class="min-h-screen flex items-center justify-center bg-brand-beige">
     <div class="text-center">
       <h1 class="text-4xl font-bold mb-4 text-brand-green--dark">
-        Custom errror page
+        {{ title }}
       </h1>
       <span>
         <BaseButton title="Home" @click="handleError" />
@@ -12,8 +12,6 @@
 </template>
 
 <script setup>
-import { useError, clearError, useHead } from "#imports";
-import { computed } from "vue";
 import BaseButton from "./components/base/BaseButton.vue";
 
 const error = useError();

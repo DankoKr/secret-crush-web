@@ -61,26 +61,6 @@
       "buttons": {
         "buyTicket": "Buy Ticket",
         "moreInfo": "More Info"
-      },
-      "items": {
-        "backToSummer": {
-          "title": "Back To Summer 2026",
-          "date": "16 Aug 2026",
-          "location": "Sofia",
-          "description": "Main summer event with a large crowd and premium night vibe."
-        },
-        "midnightHeat": {
-          "title": "Midnight Heat",
-          "date": "30 Aug 2026",
-          "location": "Plovdiv",
-          "description": "Dark club event with modern lights and elegant party energy."
-        },
-        "redKissRooftop": {
-          "title": "Red Kiss Rooftop",
-          "date": "12 Sep 2026",
-          "location": "Varna",
-          "description": "Sunset rooftop atmosphere, cocktails and deep house mood."
-        }
       }
     },
     "about": {

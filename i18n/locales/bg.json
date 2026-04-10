@@ -61,26 +61,6 @@
       "buttons": {
         "buyTicket": "Купи билет",
         "moreInfo": "Повече инфо"
-      },
-      "items": {
-        "backToSummer": {
-          "title": "Back To Summer 2026",
-          "date": "16 авг 2026",
-          "location": "София",
-          "description": "Основен summer event с голяма публика и premium night vibe."
-        },
-        "midnightHeat": {
-          "title": "Midnight Heat",
-          "date": "30 авг 2026",
-          "location": "Пловдив",
-          "description": "Тъмен клубен евент с модерни светлини и elegant party настроение."
-        },
-        "redKissRooftop": {
-          "title": "Red Kiss Rooftop",
-          "date": "12 сеп 2026",
-          "location": "Варна",
-          "description": "Sunset rooftop атмосфера, коктейли и deep house настроение."
-        }
       }
     },
     "about": {
