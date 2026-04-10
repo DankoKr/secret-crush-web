@@ -14,10 +14,10 @@
       >
         <div
           class="order-last lg:order-none h-auto min-h-[280px] cursor-pointer"
-          @click="openImage(mainImageSrc)"
+          @click="openImage(yachtEvent?.images?.[0]?.imageUrl || '')"
         >
           <img
-            :src="mainImageSrc"
+            :src="yachtEvent?.images?.[0]?.imageUrl"
             alt="Yacht party"
             class="w-full h-full object-cover"
           />
@@ -31,15 +31,16 @@
           <h3
             class="font-bold text-3xl lg:text-4xl text-brand-primary-text uppercase mb-4"
           >
-            {{ t("index.yacht.featuredTitle") }}
+            {{ yachtEvent?.name }}
           </h3>
           <div
-            class="flex flex-wrap gap-4 text-[#ff9fb0] text-[12px] uppercase tracking-widest mb-6"
+            class="flex flex-wrap text-[#ff9fb0] text-[12px] uppercase tracking-widest"
           >
-            <span>{{ t("index.yacht.schedule") }}</span>
-            <span>{{ t("index.yacht.location") }}</span>
+            <span>{{ yachtEvent?.location }}</span>
           </div>
-          <p class="mb-5 text-white">{{ t("index.yacht.description") }}</p>
+          <p class="text-white">
+            {{ yachtEvent?.description }}
+          </p>
           <div class="flex gap-4">
             <BaseButton
               :title="t('index.yacht.buttons.buyTicket')"
@@ -87,28 +88,29 @@
 </template>
 
 <script setup lang="ts">
+import { useEventStore } from "~/stores/event.store";
+import type { Event } from "~/types/event.types";
 import BaseButton from "~/components/base/BaseButton.vue";
 
 const { t } = useI18n();
+const eventStore = useEventStore();
 
-const mediaItems = computed(() => [
-  {
-    label: t("index.yacht.gallery.photoSlot"),
-    src: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80",
-  },
-  {
-    label: t("index.yacht.gallery.videoSlot"),
-    src: "https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=1200&q=80",
-  },
-  {
-    label: t("index.yacht.gallery.photoSlot"),
-    src: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=80",
-  },
-  {
-    label: t("index.yacht.gallery.videoSlot"),
-    src: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1200&q=80",
-  },
-]);
+const yachtEvent = ref<Event | null>(null);
+
+onMounted(async () => {
+  const data = await eventStore.fetchAllEvents({ type: "yacht" });
+  yachtEvent.value = data?.data?.items?.[0] || null;
+});
+
+const mediaItems = computed(() => {
+  if (yachtEvent.value?.images && yachtEvent.value.images.length > 1) {
+    return yachtEvent.value.images.slice(1).map((img, idx) => ({
+      label: `${t("index.yacht.gallery.photoSlot")} ${idx + 1}`,
+      src: img.imageUrl,
+    }));
+  }
+  return [];
+});
 
 const selectedImage = ref<string | null>(null);
 const isImageModalOpen = ref(false);
@@ -117,8 +119,4 @@ const openImage = (src: string) => {
   selectedImage.value = src;
   isImageModalOpen.value = true;
 };
-
-const mainImageSrc = computed(() => {
-  return "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80";
-});
 </script>

@@ -81,7 +81,7 @@ const isEventModalOpen = ref(false);
 
 onMounted(() => {
   if (!eventStore.getEvents.length) {
-    eventStore.fetchAllEvents();
+    eventStore.fetchAllEvents({ type: "normal" });
   }
 });
 
