@@ -39,7 +39,7 @@ export function dataFetcher(
   // Sets cookies from browser to server-side requests
   // because of authentication and session management
   const headers: Record<string, string> = {
-    locale: globalLocale.value,
+    Locale: globalLocale.value,
     Auth: config.public.apiHeaderId as string,
   };
 

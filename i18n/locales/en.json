@@ -28,16 +28,12 @@
         "yachtParties": "Yacht Parties"
       },
       "featured": {
-        "label": "Featured Event",
-        "title": "Back To Summer 2026 Bulgaria"
+        "label": "Featured Event"
       },
       "stats": {
         "when": "When",
-        "whenValue": "16.08.2026",
         "format": "Format",
-        "formatValue": "Events + Yacht",
-        "where": "Where",
-        "whereValue": "Sofia / Black Sea Coast"
+        "where": "Where"
       }
     },
     "yacht": {

@@ -1,9 +1,9 @@
 <template>
-  <section class="container flex items-center py-24" id="home">
+  <section class="container flex items-center py-6 md:py-24" id="home">
     <div
       class="mx-auto relative grid lg:grid-cols-[1.05fr_0.95fr] gap-8 items-center"
     >
-      <div class="reveal">
+      <div>
         <h1
           class="mt-5 text-4xl lg:text-5xl font-bold text-brand-primary-text uppercase"
         >
@@ -67,15 +67,25 @@
           <div
             class="absolute left-6 right-6 bottom-6 p-5 rounded-3xl bg-black/45 border border-white/10 backdrop-blur-xl"
           >
-            <span class="text-brand-secondary-text uppercase">{{
-              t("index.hero.featured.label")
-            }}</span>
+            <span class="text-brand-secondary-text uppercase">
+              {{ t("index.hero.featured.label") }}
+            </span>
             <h3
               class="md:text-2xl text-xl text-brand-primary-text uppercase mt-2"
             >
               {{ closestEvent.name }}
             </h3>
           </div>
+        </div>
+      </div>
+
+      <div class="relative" v-else>
+        <div
+          class="w-full h-[600px] rounded-[34px] bg-white/5 border border-white/10 animate-pulse flex items-center justify-center"
+        >
+          <div
+            class="w-12 h-12 border-4 border-brand-red/20 border-t-brand-red rounded-full animate-spin"
+          ></div>
         </div>
       </div>
     </div>

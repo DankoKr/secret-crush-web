@@ -1,6 +1,6 @@
 <template>
   <section class="py-32" id="events">
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto px-4 reveal">
       <div class="text-center max-w-3xl mx-auto mb-12">
         <h2
           class="font-bold text-4xl lg:text-5xl text-brand-primary-text uppercase"

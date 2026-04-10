@@ -28,16 +28,12 @@
         "yachtParties": "Яхта партита"
       },
       "featured": {
-        "label": "Препоръчано събитие",
-        "title": "Back To Summer 2026 Bulgaria"
+        "label": "Препоръчано събитие"
       },
       "stats": {
         "when": "Кога",
-        "whenValue": "16.08.2026",
         "format": "Формат",
-        "formatValue": "Events + Yacht",
-        "where": "Къде",
-        "whereValue": "София / Черноморие"
+        "where": "Къде"
       }
     },
     "yacht": {
