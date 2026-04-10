@@ -19,6 +19,5 @@ const navLinks = [
   { key: "nav.events", to: "#events" },
   { key: "nav.yacht", to: "#yacht" },
   { key: "nav.about", to: "#about" },
-  { key: "nav.contacts", to: "#contact" },
 ];
 </script>
