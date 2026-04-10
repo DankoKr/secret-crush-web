@@ -18,7 +18,7 @@ html {
   transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
   will-change: opacity, transform;
 
-  &.active {
+  &.revealed {
     opacity: 1;
     transform: translateY(0);
   }

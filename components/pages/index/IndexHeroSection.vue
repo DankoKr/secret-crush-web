@@ -3,7 +3,7 @@
     <div
       class="mx-auto relative grid lg:grid-cols-[1.05fr_0.95fr] gap-8 items-center"
     >
-      <div>
+      <div class="reveal">
         <h1
           class="mt-5 text-4xl lg:text-5xl font-bold text-brand-primary-text uppercase"
         >
@@ -39,23 +39,35 @@
         </div>
 
         <div class="mt-8 grid grid-cols-2 md:grid-cols-3 gap-3">
-          <div
-            v-for="stat in stats"
-            :key="stat.label"
-            class="p-4 rounded-[22px] border border-white/10 bg-white/5 backdrop-blur-md"
-          >
-            <span
-              class="block uppercase tracking-widest text-brand-secondary-text"
-              >{{ stat.label }}</span
+          <template v-if="closestEvent">
+            <div
+              v-for="stat in stats"
+              :key="stat.label"
+              class="p-4 rounded-[22px] border border-white/10 bg-white/5 backdrop-blur-md"
             >
-            <strong class="block mt-2 text-brand-primary-text">{{
-              stat.value
-            }}</strong>
-          </div>
+              <span
+                class="block uppercase tracking-widest text-brand-secondary-text"
+              >
+                {{ stat.label }}
+              </span>
+              <strong class="block mt-2 text-brand-primary-text">{{
+                stat.value
+              }}</strong>
+            </div>
+          </template>
+          <template v-else>
+            <div
+              v-for="i in 3"
+              :key="i"
+              class="p-4 rounded-[22px] border border-white/10 bg-white/5 backdrop-blur-md h-[92px] flex items-center justify-center"
+            >
+              <BaseLoader size="sm" :full-height="false" :show-text="false" />
+            </div>
+          </template>
         </div>
       </div>
 
-      <div class="relative group" v-if="closestEvent">
+      <div class="relative group h-[600px]" v-if="closestEvent">
         <div
           class="relative overflow-hidden rounded-[34px] p-3.5 border border-white/10 bg-gradient-to-b from-white/10 to-white/5 shadow-2xl animate-bounce-slow"
         >
@@ -81,11 +93,9 @@
 
       <div class="relative" v-else>
         <div
-          class="w-full h-[600px] rounded-[34px] bg-white/5 border border-white/10 animate-pulse flex items-center justify-center"
+          class="w-full h-[600px] rounded-[34px] bg-white/5 border border-white/10 flex items-center justify-center"
         >
-          <div
-            class="w-12 h-12 border-4 border-brand-red/20 border-t-brand-red rounded-full animate-spin"
-          ></div>
+          <BaseLoader size="lg" :show-text="false" />
         </div>
       </div>
     </div>
@@ -93,6 +103,7 @@
 </template>
 
 <script setup lang="ts">
+import BaseLoader from "~/components/base/BaseLoader.vue";
 import { onMounted, computed } from "vue";
 import { useEventStore } from "~/stores/event.store";
 import BaseButton from "~/components/base/BaseButton.vue";

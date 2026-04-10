@@ -1,28 +1,28 @@
 export default defineNuxtPlugin((nuxtApp) => {
-  nuxtApp.hook("app:mounted", () => {
+  nuxtApp.hook("app:suspense:resolve", () => {
     const observerOptions = {
-      root: null,
-      threshold: 0.3,
-      rootMargin: "0px",
+      threshold: 0.1,
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("active");
+          entry.target.classList.add("revealed");
         }
       });
     }, observerOptions);
 
-    const revealElements = document.querySelectorAll(".reveal");
-    revealElements.forEach((el) => observer.observe(el));
+    const scan = () => {
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
+    };
+
+    scan();
 
     const router = useRouter();
     router.afterEach(() => {
-      setTimeout(() => {
-        const revealElements = document.querySelectorAll(".reveal");
-        revealElements.forEach((el) => observer.observe(el));
-      }, 100);
+      nextTick(() => scan());
     });
   });
 });
