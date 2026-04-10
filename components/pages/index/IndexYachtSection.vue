@@ -98,7 +98,7 @@ const eventStore = useEventStore();
 const yachtEvent = ref<Event | null>(null);
 
 onMounted(async () => {
-  const data = await eventStore.fetchAllEvents({ type: "yacht" });
+  const data = await eventStore.fetchAllYachtEvents();
   yachtEvent.value = data?.data?.items?.[0] || null;
 });
 

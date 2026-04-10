@@ -6,11 +6,15 @@ import { apiGet } from "~/services/api.service";
 export const useEventStore = defineStore("event", {
   state: () => ({
     events: [] as Event[],
+    yachtEvents: [] as Event[],
     loading: false,
   }),
   getters: {
     getEvents(state): Event[] {
       return state.events;
+    },
+    getYachtEvents(state): Event[] {
+      return state.yachtEvents;
     },
   },
   actions: {
@@ -35,6 +39,17 @@ export const useEventStore = defineStore("event", {
       try {
         const { data } = await apiGet(`/events`, params || {});
         this.events = data.data.items;
+        return data;
+      } finally {
+        this.loading = false;
+      }
+    },
+
+    async fetchAllYachtEvents(params?: EventsParams) {
+      this.loading = true;
+      try {
+        const { data } = await apiGet(`/yacht-events`, params || {});
+        this.yachtEvents = data.data.items;
         return data;
       } finally {
         this.loading = false;
