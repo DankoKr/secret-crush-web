@@ -80,9 +80,7 @@
           <div
             class="absolute left-4 right-4 bottom-4 md:left-6 md:right-6 md:bottom-6 p-4 md:p-5 rounded-3xl bg-black/45 border border-white/10 backdrop-blur-xl"
           >
-            <span
-              class="text-[10px] md:text-xs text-brand-secondary-text uppercase"
-            >
+            <span class="text-brand-secondary-text font-bold uppercase">
               {{ t("index.hero.featured.label") }}
             </span>
             <h3
