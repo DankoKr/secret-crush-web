@@ -69,7 +69,8 @@
 
       <div class="relative group w-full lg:h-[600px]" v-if="closestEvent">
         <div
-          class="relative overflow-hidden rounded-[34px] p-2 md:p-3.5 border border-white/10 bg-gradient-to-b from-white/10 to-white/5 shadow-2xl animate-bounce-slow"
+          class="relative overflow-hidden rounded-[34px] p-2 md:p-3.5 border border-white/10 bg-gradient-to-b from-white/10 to-white/5 shadow-2xl animate-bounce-slow cursor-pointer"
+          @click="navigateTo(closestEvent.ticketUrl, { external: true })"
         >
           <img
             :src="closestEvent.images?.[0]?.imageUrl"
