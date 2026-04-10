@@ -55,13 +55,13 @@
         </div>
       </div>
 
-      <div class="relative group">
+      <div class="relative group" v-if="closestEvent">
         <div
           class="relative overflow-hidden rounded-[34px] p-3.5 border border-white/10 bg-gradient-to-b from-white/10 to-white/5 shadow-2xl animate-bounce-slow"
         >
           <img
-            src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1200&q=80"
-            alt="Event"
+            :src="closestEvent.images?.[0]?.imageUrl"
+            :alt="closestEvent.name"
             class="w-full h-[560px] object-cover rounded-[26px]"
           />
           <div
@@ -73,7 +73,7 @@
             <h3
               class="md:text-2xl text-xl text-brand-primary-text uppercase mt-2"
             >
-              {{ t("index.hero.featured.title") }}
+              {{ closestEvent.name }}
             </h3>
           </div>
         </div>
@@ -83,21 +83,37 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted, computed } from "vue";
+import { useEventStore } from "~/stores/event.store";
 import BaseButton from "~/components/base/BaseButton.vue";
 
 const { t } = useI18n();
+const eventStore = useEventStore();
+const { $dayjs } = useNuxtApp();
 
-const stats = computed(() => [
-  { label: t("index.hero.stats.when"), value: t("index.hero.stats.whenValue") },
-  {
-    label: t("index.hero.stats.format"),
-    value: t("index.hero.stats.formatValue"),
-  },
-  {
-    label: t("index.hero.stats.where"),
-    value: t("index.hero.stats.whereValue"),
-  },
-]);
+const closestEvent = computed(() => eventStore.getClosestEvent);
+
+onMounted(async () => {
+  await eventStore.fetchClosestEvent();
+});
+
+const stats = computed(() => {
+  const event = closestEvent.value;
+  return [
+    {
+      label: t("index.hero.stats.when"),
+      value: event?.date,
+    },
+    {
+      label: t("index.hero.stats.format"),
+      value: event?.type?.name,
+    },
+    {
+      label: t("index.hero.stats.where"),
+      value: event?.location,
+    },
+  ];
+});
 </script>
 
 <style scoped>

@@ -7,6 +7,7 @@ export const useEventStore = defineStore("event", {
   state: () => ({
     events: [] as Event[],
     yachtEvents: [] as Event[],
+    closestEvent: null as Event | null,
     loading: false,
   }),
   getters: {
@@ -15,6 +16,9 @@ export const useEventStore = defineStore("event", {
     },
     getYachtEvents(state): Event[] {
       return state.yachtEvents;
+    },
+    getClosestEvent(state): Event | null {
+      return state.closestEvent;
     },
   },
   actions: {
@@ -53,6 +57,17 @@ export const useEventStore = defineStore("event", {
         return data;
       } finally {
         this.loading = false;
+      }
+    },
+
+    async fetchClosestEvent() {
+      try {
+        const { data } = await apiGet(`/events/closest`);
+        this.closestEvent = data.data as Event;
+        return data.data;
+      } catch (error: unknown) {
+        console.error("Failed to fetch closest event:", error);
+        return null;
       }
     },
   },

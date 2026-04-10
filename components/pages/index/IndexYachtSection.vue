@@ -41,16 +41,12 @@
           <p class="text-white">
             {{ yachtEvent?.description }}
           </p>
-          <div class="flex gap-4">
+          <div class="flex">
             <BaseButton
               :title="t('index.yacht.buttons.buyTicket')"
               variant="primary"
               size="md"
-            />
-            <BaseButton
-              :title="t('index.yacht.buttons.viewDetails')"
-              variant="secondary"
-              size="md"
+              @click="navigateTo(yachtEvent?.ticketUrl, { external: true })"
             />
           </div>
         </div>

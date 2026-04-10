@@ -3,7 +3,7 @@
     <NuxtLink
       v-for="link in navLinks"
       :key="link.key"
-      :to="localePath('/') + link.to"
+      :to="localePath({ path: '/', hash: link.to })"
       class="text-xl text-brand-secondary-text hover:text-brand-primary-text transition-colors tracking-wider cursor-pointer"
     >
       {{ t(link.key) }}

@@ -29,7 +29,7 @@
           class="w-8 h-8 flex items-center justify-center rounded transition-colors"
           :class="
             page === currentPage
-              ? 'bg-brand-green text-brand-primary-text'
+              ? 'bg-brand-red text-brand-primary-text'
               : 'border hover:bg-gray-100'
           "
           aria-label="Page number"

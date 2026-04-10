@@ -6,7 +6,7 @@
     </label>
     <select
       v-model="val"
-      class="block w-full py-3 px-3 text-gray-700 bg-white border border-gray-300 rounded-3xl shadow-sm focus:outline-none focus:border-brand-green sm:text-sm font-semibold"
+      class="block w-full py-3 px-3 text-gray-700 bg-white border border-gray-300 rounded-3xl shadow-sm focus:outline-none focus:border-brand-red sm:text-sm font-semibold"
       :class="{
         'bg-gray-100 border-gray-100': classic,
         'border-red-500 focus:ring-red-500': inputHasErrors,

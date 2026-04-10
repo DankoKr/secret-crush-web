@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen flex items-center justify-center bg-brand-beige">
     <div class="text-center">
-      <h1 class="text-4xl font-bold mb-4 text-brand-green--dark">
+      <h1 class="text-4xl font-bold mb-4 text-brand-red">
         {{ title }}
       </h1>
       <span>

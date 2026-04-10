@@ -50,7 +50,7 @@ export default <Config>{
           transition: "color 200ms, text-decoration 200ms",
         },
         "a:not([type=link]):hover": {
-          color: theme("colors.brand-green"),
+          color: theme("colors.brand-red"),
         },
       });
     }),
