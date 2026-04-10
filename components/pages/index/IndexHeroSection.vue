@@ -67,23 +67,26 @@
         </div>
       </div>
 
-      <div class="relative group h-[600px]" v-if="closestEvent">
+      <div class="relative group w-full lg:h-[600px]" v-if="closestEvent">
         <div
-          class="relative overflow-hidden rounded-[34px] p-3.5 border border-white/10 bg-gradient-to-b from-white/10 to-white/5 shadow-2xl animate-bounce-slow"
+          class="relative overflow-hidden rounded-[34px] p-2 md:p-3.5 border border-white/10 bg-gradient-to-b from-white/10 to-white/5 shadow-2xl animate-bounce-slow"
         >
           <img
             :src="closestEvent.images?.[0]?.imageUrl"
             :alt="closestEvent.name"
-            class="w-full h-[560px] object-cover rounded-[26px]"
+            class="w-full h-[350px] md:h-[500px] lg:h-[560px] object-cover rounded-[26px]"
           />
+
           <div
-            class="absolute left-6 right-6 bottom-6 p-5 rounded-3xl bg-black/45 border border-white/10 backdrop-blur-xl"
+            class="absolute left-4 right-4 bottom-4 md:left-6 md:right-6 md:bottom-6 p-4 md:p-5 rounded-3xl bg-black/45 border border-white/10 backdrop-blur-xl"
           >
-            <span class="text-brand-secondary-text uppercase">
+            <span
+              class="text-[10px] md:text-xs text-brand-secondary-text uppercase"
+            >
               {{ t("index.hero.featured.label") }}
             </span>
             <h3
-              class="md:text-2xl text-xl text-brand-primary-text uppercase mt-2"
+              class="text-lg md:text-2xl text-brand-primary-text uppercase mt-1 md:mt-2"
             >
               {{ closestEvent.name }}
             </h3>
@@ -91,9 +94,9 @@
         </div>
       </div>
 
-      <div class="relative" v-else>
+      <div class="relative w-full" v-else>
         <div
-          class="w-full h-[600px] rounded-[34px] bg-white/5 border border-white/10 flex items-center justify-center"
+          class="w-full h-[350px] md:h-[500px] lg:h-[600px] rounded-[34px] bg-white/5 border border-white/10 flex items-center justify-center"
         >
           <BaseLoader size="lg" :show-text="false" />
         </div>

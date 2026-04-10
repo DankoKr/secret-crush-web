@@ -67,15 +67,16 @@
     <Transition name="fade">
       <div
         v-if="isMenuOpen"
-        class="lg:hidden absolute inset-x-0 top-full bg-zinc-950/97 border-b border-zinc-800 shadow-xl z-40"
+        class="lg:hidden absolute inset-x-0 top-full bg-black border-b border-zinc-800 shadow-2xl z-40"
       >
-        <div class="flex flex-col gap-6 px-4 py-6">
+        <div class="flex flex-col gap-6 px-4 py-8">
           <HeaderNavigation />
-          <div class="flex justify-center">
+
+          <div class="flex justify-center pt-4 border-t border-zinc-800">
             <NuxtLink
               v-if="otherLocale"
               :to="switchLocalePath(otherLocale.code)"
-              class="font-bold text-brand-secondary-text uppercase"
+              class="text-xl font-bold text-brand-secondary-text uppercase hover:text-brand-primary-text"
             >
               {{ otherLocale.code }}
             </NuxtLink>
