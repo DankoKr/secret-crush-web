@@ -12,7 +12,9 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@dargmuesli/nuxt-cookie-control",
   ],
+  ssr: true,
   app: {
+    baseURL: "/",
     head: {
       meta: [
         {
