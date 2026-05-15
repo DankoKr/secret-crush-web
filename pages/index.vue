@@ -21,7 +21,7 @@ useHead({
     { name: "description", content: t("index.head.description") },
     { property: "og:title", content: t("index.head.ogTitle") },
     { property: "og:description", content: t("index.head.ogDescription") },
-    { property: "og:image", content: "/img/og-image.png" },
+    { property: "og:image", content: "/img/logo.png" },
   ],
 });
 </script>
