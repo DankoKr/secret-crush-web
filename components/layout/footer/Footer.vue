@@ -26,7 +26,7 @@ const socials = [
   {
     name: "Instagram",
     icon: "instagram",
-    href: "https://www.instagram.com/secretcrush.17?igsh=YTkzOWZzbDU1c2U3",
+    href: "https://www.instagram.com/secretcrush.bg/",
     color: "#FF325F",
   },
 ];

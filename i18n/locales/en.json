@@ -2,7 +2,7 @@
   "nav": {
     "home": "Home",
     "events": "Events",
-    "yacht": "Yacht Parties",
+    "yacht": "Boat Parties",
     "about": "About Us",
     "contacts": "Contacts",
     "buyTicket": "Buy Ticket"
@@ -10,22 +10,22 @@
   "index": {
     "head": {
       "title": "Secret Crush",
-      "description": "Secret Crush - parties, yacht parties, Back To Summer 2026 Bulgaria, tickets and information.",
-      "ogTitle": "Secret Crush - parties, yacht parties, Back To Summer 2026 Bulgaria",
-      "ogDescription": "Secret Crush - parties, yacht parties, Back To Summer 2026 Bulgaria, tickets and information."
+      "description": "Secret Crush - parties, boat parties, Back To Summer 2026 Bulgaria, tickets and information.",
+      "ogTitle": "Secret Crush - parties, boat parties, Back To Summer 2026 Bulgaria",
+      "ogDescription": "Secret Crush - parties, boat parties, Back To Summer 2026 Bulgaria, tickets and information."
     },
     "hero": {
       "headline": {
         "part1": "The hottest",
         "emphasis1": "party events",
         "middle": "and",
-        "emphasis2": "yacht parties",
+        "emphasis2": "boat parties",
         "part2": "this summer"
       },
       "subtitle": "Secret Crush creates modern events with a dark premium look, energetic atmosphere, and clear information for every event. Here people can easily review the schedule and reach the ticket button.",
       "buttons": {
         "exploreEvents": "Explore Events",
-        "yachtParties": "Yacht Parties"
+        "yachtParties": "Boat Parties"
       },
       "featured": {
         "label": "Featured Event"
@@ -37,8 +37,8 @@
       }
     },
     "yacht": {
-      "title": "Yacht Parties",
-      "featuredLabel": "Featured Yacht Experience",
+      "title": "Boat Parties",
+      "featuredLabel": "Featured Boat Experience",
       "buttons": {
         "buyTicket": "Buy Ticket",
         "viewDetails": "View Details"
@@ -49,15 +49,19 @@
       }
     },
     "events": {
-      "title": "Events",
+      "title": "City Events",
       "buttons": {
         "buyTicket": "Buy Ticket",
         "moreInfo": "More Info"
+      },
+      "comingSoon": {
+        "title": "Coming Soon",
+        "message": "Tickets for this event will be available soon. Please check back later!"
       }
     },
     "about": {
       "title": "About Us",
-      "description": "Secret Crush organizes modern party events and yacht parties with a dark, luxurious, social-first look. The brand communicates not just events, but a feeling, style, and belonging.",
+      "description": "Secret Crush organizes party events with a premium atmosphere, strong energy and unforgettable experiences.",
       "contacts": {
         "phone": "Phone",
         "email": "Email"
@@ -75,7 +79,7 @@
       "copyright": " Secret Crush. All rights reserved."
     },
     "header": {
-      "logoSubtext": "Party Events & Yacht Parties"
+      "logoSubtext": "Party Events & Boat Parties"
     }
   }
 }

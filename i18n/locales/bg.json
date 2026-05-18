@@ -2,7 +2,7 @@
   "nav": {
     "home": "Начало",
     "events": "Събития",
-    "yacht": "Яхта Партита",
+    "yacht": "Лодка Партита",
     "about": "За Нас",
     "contacts": "Контакти",
     "buyTicket": "Купи Билет"
@@ -10,22 +10,22 @@
   "index": {
     "head": {
       "title": "Secret Crush",
-      "description": "Secret Crush - партита, яхта партита, Back To Summer 2026 Bulgaria, билети и информация.",
-      "ogTitle": "Secret Crush - партита, яхта партита, Back To Summer 2026 Bulgaria",
-      "ogDescription": "Secret Crush - партита, яхта партита, Back To Summer 2026 Bulgaria, билети и информация."
+      "description": "Secret Crush - партита, лодка партита, Back To Summer 2026 Bulgaria, билети и информация.",
+      "ogTitle": "Secret Crush - партита, лодка партита, Back To Summer 2026 Bulgaria",
+      "ogDescription": "Secret Crush - партита, лодка партита, Back To Summer 2026 Bulgaria, билети и информация."
     },
     "hero": {
       "headline": {
         "part1": "Най-горещите",
         "emphasis1": "парти събития",
         "middle": "и",
-        "emphasis2": "яхта партита",
+        "emphasis2": "лодка партита",
         "part2": "това лято"
       },
       "subtitle": "Secret Crush създава модерни евенти с тъмна premium визия, енергична атмосфера и ясна информация за всяко събитие. Тук хората могат лесно да разгледат програмата и да стигнат до бутона за билети.",
       "buttons": {
         "exploreEvents": "Разгледай събития",
-        "yachtParties": "Яхта партита"
+        "yachtParties": "Лодка партита"
       },
       "featured": {
         "label": "Препоръчано събитие"
@@ -37,7 +37,7 @@
       }
     },
     "yacht": {
-      "title": "Яхта Партита",
+      "title": "Лодка Партита",
       "featuredLabel": "Препоръчано преживяване",
       "buttons": {
         "buyTicket": "Купи билет",
@@ -49,15 +49,19 @@
       }
     },
     "events": {
-      "title": "Събития",
+      "title": "Събития в града",
       "buttons": {
         "buyTicket": "Купи билет",
         "moreInfo": "Повече инфо"
+      },
+      "comingSoon": {
+        "title": "Очаквайте скоро",
+        "message": "Билетите за това събитие ще бъдат налични скоро. Моля, проверете по-късно!"
       }
     },
     "about": {
       "title": "За Нас",
-      "description": "Secret Crush организира модерни party events и яхта партита с тъмен, луксозен, social-first облик. Брандът комуникира не просто събития, а усещане, стил и принадлежност.",
+      "description": "Secret Crush създава парти събития с premium атмосфера, силна енергия и незабравими изживявания.",
       "contacts": {
         "phone": "Телефон",
         "email": "Email"
@@ -75,7 +79,7 @@
       "copyright": " Secret Crush. Всички права запазени."
     },
     "header": {
-      "logoSubtext": "Парти Събития & Яхта Партита"
+      "logoSubtext": "Парти Събития & Лодка Партита"
     }
   }
 }

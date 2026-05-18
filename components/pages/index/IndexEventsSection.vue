@@ -47,7 +47,7 @@
                 :title="t('index.events.buttons.buyTicket')"
                 variant="primary"
                 size="sm"
-                @click="navigateTo(event.ticketUrl, { external: true })"
+                @click="onTicketClick(event)"
               />
               <BaseButton
                 :title="t('index.events.buttons.moreInfo')"
@@ -65,12 +65,25 @@
       v-model="isEventModalOpen"
       :event="selectedEvent"
     />
+
+    <BaseModal
+      id="coming-soon-modal"
+      v-model="isComingSoonModalOpen"
+      :modalTitle="t('index.events.comingSoon.title')"
+    >
+      <div class="text-center py-6">
+        <p class="text-brand-secondary-text text-lg">
+          {{ t("index.events.comingSoon.message") }}
+        </p>
+      </div>
+    </BaseModal>
   </section>
 </template>
 
 <script setup lang="ts">
 import type { Event } from "~/types/event.types";
 import BaseButton from "~/components/base/BaseButton.vue";
+import BaseModal from "~/components/base/BaseModal.vue";
 import IndexEventDescriptionModal from "./IndexEventDescriptionModal.vue";
 
 const { t } = useI18n();
@@ -78,6 +91,7 @@ const eventStore = useEventStore();
 
 const selectedEvent = ref<Event | null>(null);
 const isEventModalOpen = ref(false);
+const isComingSoonModalOpen = ref(false);
 
 onMounted(() => {
   if (!eventStore.getEvents.length) {
@@ -88,5 +102,13 @@ onMounted(() => {
 const openEventDescription = (event: Event) => {
   selectedEvent.value = event;
   isEventModalOpen.value = true;
+};
+
+const onTicketClick = (event: Event) => {
+  if (event.ticketUrl) {
+    navigateTo(event.ticketUrl, { external: true });
+  } else {
+    isComingSoonModalOpen.value = true;
+  }
 };
 </script>
