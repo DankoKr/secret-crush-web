@@ -22,7 +22,6 @@
         "emphasis2": "boat parties",
         "part2": "this summer"
       },
-      "subtitle": "Secret Crush creates modern events with a dark premium look, energetic atmosphere, and clear information for every event. Here people can easily review the schedule and reach the ticket button.",
       "buttons": {
         "exploreEvents": "Explore Events",
         "yachtParties": "Boat Parties"
@@ -37,7 +36,6 @@
       }
     },
     "yacht": {
-      "title": "Boat Parties",
       "featuredLabel": "Featured Boat Experience",
       "buttons": {
         "buyTicket": "Buy Ticket",
@@ -49,7 +47,6 @@
       }
     },
     "events": {
-      "title": "City Events",
       "buttons": {
         "buyTicket": "Buy Ticket",
         "moreInfo": "More Info"

@@ -1,14 +1,6 @@
 <template>
   <section class="py-24" id="yacht">
     <div class="container mx-auto px-4">
-      <div class="text-center max-w-3xl mx-auto mb-12 reveal">
-        <h2
-          class="font-bold mt-4 text-4xl lg:text-6xl text-brand-primary-text uppercase leading-tight"
-        >
-          {{ t("index.yacht.title") }}
-        </h2>
-      </div>
-
       <div
         class="grid grid-cols-1 gap-6 lg:grid-cols-[1.1fr_0.9fr] overflow-hidden rounded-[34px] border border-white/10 bg-white/5 shadow-2xl reveal"
       >

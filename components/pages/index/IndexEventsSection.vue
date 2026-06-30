@@ -1,14 +1,6 @@
 <template>
   <section class="py-32" id="events">
     <div class="container mx-auto px-4 reveal">
-      <div class="text-center max-w-3xl mx-auto mb-12">
-        <h2
-          class="font-bold text-4xl lg:text-5xl text-brand-primary-text uppercase"
-        >
-          {{ t("index.events.title") }}
-        </h2>
-      </div>
-
       <div v-if="eventStore.loading" class="text-center text-white">
         {{ t("generic.loading") }}
       </div>
@@ -39,9 +31,6 @@
             >
               {{ event.name }}
             </h3>
-            <p class="mt-3 text-brand-secondary-text line-clamp-3">
-              {{ event.intro }}
-            </p>
             <div class="flex gap-3 mt-6">
               <BaseButton
                 :title="t('index.events.buttons.buyTicket')"

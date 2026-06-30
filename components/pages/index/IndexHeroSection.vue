@@ -17,9 +17,6 @@
           </span>
           {{ t("index.hero.headline.part2") }}
         </h1>
-        <p class="max-w-[680px] mt-5 text-lg text-brand-secondary-text">
-          {{ t("index.hero.subtitle") }}
-        </p>
 
         <div class="flex flex-wrap gap-3.5 mt-7">
           <BaseButton
@@ -37,67 +34,17 @@
             size="lg"
           />
         </div>
-
-        <div class="mt-8 grid grid-cols-2 md:grid-cols-3 gap-3">
-          <template v-if="closestEvent">
-            <div
-              v-for="stat in stats"
-              :key="stat.label"
-              class="p-4 rounded-[22px] border border-white/10 bg-white/5 backdrop-blur-md"
-            >
-              <span
-                class="block uppercase tracking-widest text-brand-secondary-text"
-              >
-                {{ stat.label }}
-              </span>
-              <strong class="block mt-2 text-brand-primary-text">{{
-                stat.value
-              }}</strong>
-            </div>
-          </template>
-          <template v-else>
-            <div
-              v-for="i in 3"
-              :key="i"
-              class="p-4 rounded-[22px] border border-white/10 bg-white/5 backdrop-blur-md h-[92px] flex items-center justify-center"
-            >
-              <BaseLoader size="sm" :full-height="false" :show-text="false" />
-            </div>
-          </template>
-        </div>
       </div>
 
-      <div class="relative group w-full lg:h-[600px]" v-if="closestEvent">
+      <div class="relative group w-full lg:h-[600px]">
         <div
-          class="relative overflow-hidden rounded-[34px] p-2 md:p-3.5 border border-white/10 bg-gradient-to-b from-white/10 to-white/5 shadow-2xl animate-bounce-slow cursor-pointer"
-          @click="navigateTo(closestEvent.ticketUrl, { external: true })"
+          class="relative overflow-hidden rounded-[34px] p-2 md:p-3.5 border border-white/10 bg-gradient-to-b from-white/10 to-white/5 shadow-2xl animate-bounce-slow"
         >
           <img
-            :src="closestEvent.images?.[0]?.imageUrl"
-            :alt="closestEvent.name"
+            src="/img/upcoming-events.jpeg"
+            alt="Upcoming Events"
             class="w-full h-[350px] md:h-[500px] lg:h-[560px] object-cover rounded-[26px]"
           />
-
-          <div
-            class="absolute left-4 right-4 bottom-4 md:left-6 md:right-6 md:bottom-6 p-4 md:p-5 rounded-3xl bg-black/45 border border-white/10 backdrop-blur-xl"
-          >
-            <span class="text-brand-secondary-text font-bold uppercase">
-              {{ t("index.hero.featured.label") }}
-            </span>
-            <h3
-              class="text-lg md:text-2xl text-brand-primary-text uppercase mt-1 md:mt-2"
-            >
-              {{ closestEvent.name }}
-            </h3>
-          </div>
-        </div>
-      </div>
-
-      <div class="relative w-full" v-else>
-        <div
-          class="w-full h-[350px] md:h-[500px] lg:h-[600px] rounded-[34px] bg-white/5 border border-white/10 flex items-center justify-center"
-        >
-          <BaseLoader size="lg" :show-text="false" />
         </div>
       </div>
     </div>
@@ -105,38 +52,9 @@
 </template>
 
 <script setup lang="ts">
-import BaseLoader from "~/components/base/BaseLoader.vue";
-import { onMounted, computed } from "vue";
-import { useEventStore } from "~/stores/event.store";
 import BaseButton from "~/components/base/BaseButton.vue";
 
 const { t } = useI18n();
-const eventStore = useEventStore();
-const { $dayjs } = useNuxtApp();
-
-const closestEvent = computed(() => eventStore.getClosestEvent);
-
-onMounted(async () => {
-  await eventStore.fetchClosestEvent();
-});
-
-const stats = computed(() => {
-  const event = closestEvent.value;
-  return [
-    {
-      label: t("index.hero.stats.when"),
-      value: event?.date,
-    },
-    {
-      label: t("index.hero.stats.format"),
-      value: event?.type?.name,
-    },
-    {
-      label: t("index.hero.stats.where"),
-      value: event?.location,
-    },
-  ];
-});
 </script>
 
 <style scoped>
