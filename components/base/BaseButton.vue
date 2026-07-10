@@ -9,7 +9,10 @@
   >
     <FontAwesomeIcon v-if="prependIcon && !loading" :icon="prependIcon" />
     <FontAwesomeIcon v-if="loading" :icon="faSpinner" class="animate-spin" />
-    {{ title }}
+
+    <!-- Use title if passed, otherwise default to slot content -->
+    <slot>{{ title }}</slot>
+
     <FontAwesomeIcon v-if="appendIcon && !loading" :icon="appendIcon" />
   </component>
 </template>
@@ -40,23 +43,23 @@ const componentToShow = computed(() => {
 });
 
 const type = props.type || "button";
-
 const linkToComputed = computed(() => props.linkTo);
 
 const computedClasses = computed(() => {
   const baseClasses =
-    "inline-flex items-center font-bold justify-center gap-1 transition-all rounded-xl disabled:opacity-50 no-underline hover:no-underline border border-transparent uppercase";
+    "inline-flex items-center font-bold gap-1 transition-all rounded-xl disabled:opacity-50 no-underline hover:no-underline border uppercase";
 
   const colorVariants = {
     primary:
-      "bg-brand-red text-brand-primary-text hover:bg-brand-red hover:text-brand-primary-text border-transparent",
+      "bg-brand-red text-brand-primary-text border-transparent hover:bg-brand-red/90",
 
+    // Added outline styling as requested
     secondary:
-      "bg-transparent text-brand-secondary-text hover:bg-brand-red hover:text-brand-primary-text border-transparent",
+      "bg-transparent text-brand-primary-text border-white/20 hover:border-brand-red hover:bg-white/5",
 
-    white: "bg-white text-black border-white hover:bg-white hover:text-black",
+    white: "bg-white text-black border-white hover:bg-white/90",
 
-    default: "bg-brand-yellow text-brand-primary-text",
+    default: "bg-brand-yellow text-brand-primary-text border-transparent",
   };
 
   const defaultColorClasses =
@@ -75,10 +78,10 @@ const computedClasses = computed(() => {
       sizeClasses = "py-1 px-2 text-sm";
       break;
     case "lg":
-      sizeClasses = "py-3 px-6 text-md";
+      sizeClasses = "py-4 px-6 text-sm tracking-wider";
       break;
     case "xl":
-      sizeClasses = "py-3 px-8 text-lg";
+      sizeClasses = "py-4 px-8 text-base tracking-wider";
       break;
     case "md":
     default:

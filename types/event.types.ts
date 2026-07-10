@@ -7,6 +7,7 @@ export interface Event {
   intro: string;
   description: string;
   location: string;
+  locationPinpoint: string;
   date: string;
   ticketUrl: string;
   isActive: boolean;

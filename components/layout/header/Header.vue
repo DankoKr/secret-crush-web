@@ -15,53 +15,54 @@
 
       <div class="hidden lg:flex items-center gap-8 ml-auto">
         <HeaderNavigation />
-        <div class="flex items-center">
-          <NuxtLink
-            v-if="otherLocale"
-            :to="switchLocalePath(otherLocale.code)"
-            class="text-brand-secondary-text hover:text-brand-primary-text uppercase"
-          >
-            {{ otherLocale.code }}
-          </NuxtLink>
-        </div>
       </div>
 
-      <button
-        @click="isMenuOpen = !isMenuOpen"
-        class="lg:hidden p-2 text-brand-primary-text ml-auto"
-        aria-label="Toggle Menu"
-      >
-        <svg
-          v-if="!isMenuOpen"
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-8 w-8"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
+      <div class="flex items-center gap-4 ml-auto lg:ml-0">
+        <NuxtLink
+          v-if="otherLocale"
+          :to="switchLocalePath(otherLocale.code)"
+          class="text-brand-secondary-text hover:text-brand-primary-text uppercase text-base lg:text-lg font-medium"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16"
-          />
-        </svg>
-        <svg
-          v-else
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-8 w-8"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
+          {{ otherLocale.code }}
+        </NuxtLink>
+
+        <button
+          @click="isMenuOpen = !isMenuOpen"
+          class="lg:hidden p-2 text-brand-primary-text"
+          aria-label="Toggle Menu"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M6 18L18 6M6 6l12 12"
-          />
-        </svg>
-      </button>
+          <svg
+            v-if="!isMenuOpen"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+          <svg
+            v-else
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
 
     <Transition name="fade">
@@ -71,16 +72,6 @@
       >
         <div class="flex flex-col gap-6 px-4 py-8">
           <HeaderNavigation />
-
-          <div class="flex justify-center pt-4 border-t border-zinc-800">
-            <NuxtLink
-              v-if="otherLocale"
-              :to="switchLocalePath(otherLocale.code)"
-              class="text-xl font-bold text-brand-secondary-text uppercase hover:text-brand-primary-text"
-            >
-              {{ otherLocale.code }}
-            </NuxtLink>
-          </div>
         </div>
       </div>
     </Transition>

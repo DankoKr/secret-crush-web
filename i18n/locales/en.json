@@ -16,11 +16,14 @@
     },
     "hero": {
       "headline": {
-        "part1": "The hottest",
-        "emphasis1": "party events",
-        "middle": "and",
-        "emphasis2": "boat parties",
-        "part2": "this summer"
+        "part1": "Secret crush",
+        "emphasis1": "summer season",
+        "part2": "..."
+      },
+      "subheadline": {
+        "part1": "Hot parties. Secret vibes.",
+        "emphasis1": " Unforgettable",
+        "part2": " memories."
       },
       "buttons": {
         "exploreEvents": "Explore Events",
@@ -30,9 +33,8 @@
         "label": "Featured Event"
       },
       "stats": {
-        "when": "When",
-        "format": "Format",
-        "where": "Where"
+        "nextEvent": "Next Event",
+        "format": "Format"
       }
     },
     "yacht": {
