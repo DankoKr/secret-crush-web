@@ -147,7 +147,7 @@
           <div
             class="relative overflow-hidden rounded-[24px] p-1.5 border border-white/10 bg-gradient-to-b from-white/10 to-white/5 shadow-2xl"
           >
-            <NuxtImg
+            <img
               src="/img/upcoming-events.jpeg"
               alt="Upcoming Events Mobile View"
               class="w-full h-[280px] sm:h-[350px] object-cover rounded-[18px]"
@@ -164,7 +164,7 @@
           class="relative overflow-hidden rounded-[34px] p-2 md:p-3.5 border border-white/10 bg-gradient-to-b from-white/10 to-white/5 shadow-2xl animate-bounce-slow cursor-pointer"
           @click="navigateTo(closestEvent.ticketUrl, { external: true })"
         >
-          <NuxtImg
+          <img
             src="/img/upcoming-events.jpeg"
             alt="Upcoming Events"
             class="w-full h-[350px] md:h-[500px] lg:h-[560px] object-cover rounded-[26px]"
