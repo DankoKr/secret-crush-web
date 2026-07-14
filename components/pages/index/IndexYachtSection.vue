@@ -1,5 +1,5 @@
 <template>
-  <section class="py-24" id="yacht">
+  <section v-if="yachtEvent" class="py-24" id="yacht">
     <div class="container mx-auto px-4">
       <div
         class="grid grid-cols-1 gap-6 lg:grid-cols-[1.1fr_0.9fr] overflow-hidden rounded-[34px] border border-white/10 bg-white/5 shadow-2xl reveal"
