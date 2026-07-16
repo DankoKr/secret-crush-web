@@ -15,7 +15,7 @@
             <img
               :src="event.images?.[0]?.imageUrl"
               :alt="event.name"
-              class="w-full h-72 object-contain"
+              class="w-full h-72 object-cover"
             />
           </div>
           <div class="p-6">
